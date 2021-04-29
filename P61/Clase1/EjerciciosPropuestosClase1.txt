@@ -1,0 +1,14 @@
+- Primeros ejercicios:
+
+1) Algoritmo para calcular el área de un cuadrado
+2) Algoritmo para calcular el perímtero de un cuadrado
+3) Algoritmo para calcular la distancia entre dos
+puntos (Distancia Euclidiana) (x1,y1) (x2,y2)
+4) Algoritmo para calcular el área del círculo
+5) Algoritmo para calcular el volumen de un cono
+6) Algoritmo para calcular el área de un pentágono
+regular
+7) Algoritmo para calcular el área de un 
+paralelepípedo
+8) Algoritmo para calcular el promedio de
+4 notas, cada una en escala de 0.0 a 5.0
