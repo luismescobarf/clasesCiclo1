@@ -1,0 +1,19 @@
+Ejercicios:
+-----------
+1) Escribir un algoritmo para hallar 
+el área de un triángulo.
+2) Escribir un algoritmo para encontrar
+la distancia entre dos puntos del plano cartesiano:
+Utilizar fórmula de distancia euclidiana (x1,y1) (x2,y2)
+3) Escribir un algoritmo que reciba cuatro números
+y reporte la diferencia de los dos primeros,
+reporte el producto del tercero y el cuarto,
+reporte el promedio de los cuatro números.
+4) Escribir un algoritmo para hallar el área de un círculo.ç
+5) Algoritmo para acumular la diferencia de 4 números:
+Sumar la diferencia entre el primero y el segundo,
+luego sumar la diferencia entre el segundo y el tercero,
+luego sumar la diferencia entre el tercero y el cuarto,
+finalmente sumar la diferencia entre el primero y el cuarto.
+6) Escribir un algoritmo que recibe los lados de un polígono
+irregular de 4 lados.

@@ -6,7 +6,7 @@ el doble de la suma de estos.
 1. Almacenar el primer valor
 2. Almacenar el segundo valor
 3. Sumar los dos valores y guardar el resultado.
-4. Dublicar la suma de los valores y guardar resultado.
+---4. Duplicar la suma de los valores y guardar resultado.
 5. Informar el resultado
 
 - Programa (C++,Python,Java, JavaScript)

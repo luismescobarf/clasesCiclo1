@@ -1,0 +1,11 @@
+- Problema: Se requiere calcular
+la suma de dos valores dados.
+
+- Algoritmo (Pseudocódigo)
+1. Obtener el primer valor.
+2. Obtener el segundo valor.
+3. Sumar los valores almacenados y guardar
+el resultado.
+4. Mostrar el resultado
+
+- Traducción (C++,Java,C#, Python!!!)

@@ -1,0 +1,20 @@
+- Problema (5): Algoritmo para acumular la diferencia de 4 números:
+Sumar la diferencia entre el primero y el segundo,
+luego sumar la diferencia entre el segundo y el tercero,
+luego sumar la diferencia entre el tercero y el cuarto,
+finalmente sumar la diferencia entre el primero y el cuarto.
+Objetivo -> Acumulación de diferencias de números
+			ingresados.
+			
+- Algoritmo (Pseudocódigo)
+1. Almacenar el primer número.
+2. Almacenar el segundo número.
+3. Almacenar el tercer número.
+4. Almacenar el cuarto número.
+5. Inicializar una variable para acumular diferencias.
+6. Diferencia de primero con segundo.
+7. Diferencia de segundo con tercero.
+8. Diferencia de terceroo con cuarto.
+9. Diferencia de primero con cuarto.
+10. Sumar todas las diferencias
+11. Informamos el acumulado de diferencias.
