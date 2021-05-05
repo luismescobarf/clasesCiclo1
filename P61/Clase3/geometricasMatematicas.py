@@ -15,3 +15,6 @@ def aRectangulo(l=1,a=1):
 
 def promedioNotas(nota_1=1.0,nota_2=1.0,nota_3=1.0,nota_4=1.0):
     return sum( (nota_1,nota_2,nota_3,nota_4) )/ len((nota_1,nota_2,nota_3,nota_4))
+
+def promedio3Conexiones(c1=0,c2=0,c3=0):
+    return sum( (c1,c2,c3) )/ len((c1,c2,c3))
