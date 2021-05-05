@@ -1,0 +1,2 @@
+- Se requiere una función que calcule la distancia promedio
+que existe en una suceción (secuencia) de 4 puntos.
