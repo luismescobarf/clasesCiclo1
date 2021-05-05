@@ -36,11 +36,11 @@ print("La distancia promedio = ",longitudPromedio)
 print("La menor distancia = ",longitudMinima)
 print("La mayor distancia = ",longitudMaxima)
 
-#Salidas de diagnóstico
-print("----------------------")
-print("d_1_2 =",d_1_2)
-print("d_2_3 =",d_2_3)
-print("d_3_4 =",d_3_4)
+# #Salidas de diagnóstico
+# print("----------------------")
+# print("d_1_2 =",d_1_2)
+# print("d_2_3 =",d_2_3)
+# print("d_3_4 =",d_3_4)
 
 
 
