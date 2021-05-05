@@ -9,7 +9,11 @@ Utilizar fórmula de distancia euclidiana (x1,y1) (x2,y2)
 y reporte la diferencia de los dos primeros,
 reporte el producto del tercero y el cuarto,
 reporte el promedio de los cuatro números.
-4) Escribir un algoritmo para hallar el área de un círculo.ç
+3b) Escribir un algoritmo que reciba cuatro números
+y reporte la diferencia de los dos primeros,
+reporte el producto del tercero y el cuarto,
+reporte el promedio descartando el menor de los números.
+4) Escribir un algoritmo para hallar el área de un círculo.
 5) Algoritmo para acumular la diferencia de 4 números:
 Sumar la diferencia entre el primero y el segundo,
 luego sumar la diferencia entre el segundo y el tercero,

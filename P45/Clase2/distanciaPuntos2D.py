@@ -20,7 +20,7 @@
 """
 X1 = 4
 Y1 = 5
-X2 = 6
-Y2 = 5
-formula = (((X1 - X2) ** 2) + ((Y1 - Y2) ** 2)) ** (1/2)
+X2 = 0
+Y2 = 0
+formula = (((X2 - X1) ** 2) + ((Y2 - Y1) ** 2)) ** (1/2)
 print("La distacia es: ", formula)
