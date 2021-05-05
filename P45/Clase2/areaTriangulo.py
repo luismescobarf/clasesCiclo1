@@ -6,9 +6,18 @@
 #3. Realizar el cálculo (base*altura)/2 y guardarlo
 #4. Reportar el resultado almacenado
 
+# def areaTriangulo(base,altura):
+#     resultado = (base*altura)/2
+#     return resultado
+
+import libreriaGeometricas
+
 #Transcripción a Python
 altura = 12
 base = 20
-areaTriangulo = (base*altura)/2
-print("El área del triángulo es ", areaTriangulo)
+#areaTriangulo = (base*altura)/2
+areaResultante = libreriaGeometricas.areaTriangulo(base,altura)
+print("El área del triángulo es ", areaResultante)
+
+
 

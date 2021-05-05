@@ -21,17 +21,21 @@
 """def nombreFuncion(listadoParametros):
     pass"""
 
-def distanciaEuclidiana(X1,Y1,X2,Y2):
-    resultado = (((X2 - X1) ** 2) + ((Y2 - Y1) ** 2)) ** (1/2)
-    return resultado
+# def distanciaEuclidiana(X1,Y1,X2,Y2):
+#     resultado = (((X2 - X1) ** 2) + ((Y2 - Y1) ** 2)) ** (1/2)
+#     return resultado
+
+import libreriaGeometricas as lg
+import modulosImportados.geometricasMatematicas as gm
 
 X1 = 4
 Y1 = 5
 X2 = 6
 Y2 = 5
 #formula = (((X2 - X1) ** 2) + ((Y2 - Y1) ** 2)) ** (1/2)
-formula = distanciaEuclidiana(X1,Y1,X2,Y2)
+formula = lg.distanciaEuclidiana(X1,Y1,X2,Y2)
 print("La distacia es: ", formula)
+print("La distacia utilizando librería externa es: ", gm.distEUC(X1,X2,Y1,Y2))
 
-formula = distanciaEuclidiana(4,5,0,0)
+formula = lg.distanciaEuclidiana(4,5,0,0)
 print("La segunda distacia es: ", formula)
