@@ -18,9 +18,20 @@
 2) Multiplicaciones y las divisiones (Primero de izquierda a derecha)
 3) Sumas y restas (Primero de izquierda a derecha)
 """
+"""def nombreFuncion(listadoParametros):
+    pass"""
+
+def distanciaEuclidiana(X1,Y1,X2,Y2):
+    resultado = (((X2 - X1) ** 2) + ((Y2 - Y1) ** 2)) ** (1/2)
+    return resultado
+
 X1 = 4
 Y1 = 5
-X2 = 0
-Y2 = 0
-formula = (((X2 - X1) ** 2) + ((Y2 - Y1) ** 2)) ** (1/2)
+X2 = 6
+Y2 = 5
+#formula = (((X2 - X1) ** 2) + ((Y2 - Y1) ** 2)) ** (1/2)
+formula = distanciaEuclidiana(X1,Y1,X2,Y2)
 print("La distacia es: ", formula)
+
+formula = distanciaEuclidiana(4,5,0,0)
+print("La segunda distacia es: ", formula)
