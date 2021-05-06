@@ -1,4 +1,4 @@
-def propuesta1CalculoIVA_4(producto1,producto2,producto3,producto4):
+def propuesta1CalculoIVA_4(producto1=0,producto2=0,producto3=0,producto4=0):
     #Lógica del proceso
     IVA = 0.19
     pagoAdicional = 0
@@ -8,13 +8,13 @@ def propuesta1CalculoIVA_4(producto1,producto2,producto3,producto4):
     pagoAdicional = pagoAdicional + (producto4 * IVA)
     return pagoAdicional
 
-def propuesta2CalculoIVA_4(producto1,producto2,producto3,producto4):
+def propuesta2CalculoIVA_4(producto1=0,producto2=0,producto3=0,producto4=0):
     #Lógica del proceso
     IVA = 0.19    
     pagoAdicional = (producto1+producto2+producto3+producto4)*IVA
     return pagoAdicional
 
-def propuesta3CalculoIVA_4(producto1,producto2,producto3,producto4):
+def propuesta3CalculoIVA_4(producto1=0,producto2=0,producto3=0,producto4=0):
     #Lógica del proceso
     IVA = 0.19   
     return sum( (producto1,producto2,producto3,producto4) ) * IVA

@@ -24,16 +24,19 @@ from logica import propuesta2CalculoIVA_4 as p2_iva
 #from logica import propuesta3CalculoIVA_4 as p3_iva
 from interfaz import *
 
-# producto1 = 1200000
-# producto2 = 1500000
-# producto3 = 500000
-# producto4 = 4000000
+
 
 #Interacción con el usuario
 # print("---------------------------------------------")
 # print("Bienvenido aplicación cálculo de impuesto IVA")
 # print("---------------------------------------------")
 bienvenida()
+
+# producto1 = 1200000
+# producto2 = 1500000
+# producto3 = 500000
+# producto4 = 4000000
+
 # producto1 = int(input("Precio producto 1: "))
 # producto2 = int(input("Precio producto 2: "))
 # producto3 = int(input("Precio producto 3: "))
