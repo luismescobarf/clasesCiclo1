@@ -2,3 +2,14 @@
 que existe en una suceción (secuencia) de 4 puntos, reportar
 esa distancia promedio, y reportar la conexión menor y la conexión 
 mayor.
+
+- Algoritmo (función) para obtener el área promedio de 5
+triángulos especificados (base y altura)
+
+- Reto1 Semana 1 Ciclo 1 2020-2 (Foro)
+
+- Cálculo de impuestos: se reciben los montos de 
+patrimonio, pasivos y activos, cada uno con un impuesto
+de 5%, 15% y 30%. Retornar el pago total por concepto de impuestos.
+
+- Reto publicado en plataforma (iMaster -> foro)
