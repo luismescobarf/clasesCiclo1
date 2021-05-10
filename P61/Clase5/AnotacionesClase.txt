@@ -1,0 +1,19 @@
+1) Introducción a condicionales:
+- Sentencias declarativas: Falso o verdadero.
+Ejemplos: 
+Juan es mayor que Pedro. (Juan: 33, Pedro: 15) -> True
+La Tierra tiene forma de plato. -> False
+A es mayor que B. (A = 12, B = 100) -> False
+Contraejemplos:
+La paella es el mejor plato que existe. -> ...
+Margarita es la niña más bonita. -> ...
+- Símbolos relacionales:
+<
+>
+<=
+>=
+==
+!=
+- Condicional: Estructura que me permite
+diferenciar entre dos caminos, dos versiones
+del algoritmo.
