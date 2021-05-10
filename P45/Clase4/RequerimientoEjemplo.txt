@@ -1,0 +1,5 @@
+-> Ejemplo Lógica vs Interacción
+--------------------------------
+Se requiere una función que calcule el precio final de venta
+de una serie de artículos (4 artículos ) aplicándoles el IVA (19%)
+y reportando el precio final de toda la compra.
