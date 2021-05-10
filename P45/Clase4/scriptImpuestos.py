@@ -17,3 +17,25 @@
 # 8) Calculamos el valor total de los productos
 # 9) Sumamos al valor total de los productos el acumulado
 # de impuestos.
+
+#Traducción LP -> Python
+producto1 = 1200000
+producto2 = 1500000
+producto3 = 350000
+producto4 = 4000000
+IVA = 0.19
+acumuladorImpuestos = 0
+#acumuladorImpuestos = acumuladorImpuestos + (producto1 * IVA)
+acumuladorImpuestos += producto1 * IVA
+acumuladorImpuestos += producto2 * IVA
+acumuladorImpuestos += producto3 * IVA
+acumuladorImpuestos += producto4 * IVA
+#precioTotalProductos = producto1 + producto2 + producto3 + producto4
+precioTotalProductos = sum((producto1,producto2,producto3,producto4))
+precioRealCompra = precioTotalProductos + acumuladorImpuestos
+print("Precio final de compra:",precioRealCompra)
+
+
+
+
+
