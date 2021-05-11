@@ -20,3 +20,12 @@ Contraejemplos:
 * Falcao ha sido el mejor delantero de la historia de Colombia. (...)
 * El Real Madrid es el mejor equipo de la historia. (...)
 * Las playas de La Habana son las más bonitas del Caribe. (...)
+
+- Ejemplo de requerimiento que necesita condicionales
+
+*Diagrama de Flujo -> Algoritmo que recibe dos números
+y retorna la suma de estos.
+
+Programa que recibe dos números enteros y reporta
+si la suma de ellos es positiva.
+
