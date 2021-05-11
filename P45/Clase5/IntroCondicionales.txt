@@ -1,0 +1,22 @@
+Recordemos:
+- Operadores -> Aritméticos
+                +, -, *, **, /, //, %   (int -> float)
+                                        (int -> int)
+                                        (float -> float)
+                Relacionales
+                <, >, <=, >=, !=, ==(int,int -> bool)
+                                    (float,float -> bool)
+                                    (float,int -> bool)
+                                    (str,str -> bool)
+
+-Sentencias declarativas: Verdadero o Falso
+Ejemplos:
+* Hoy es lunes. (True)
+* Ahora es de de día. (False)
+* Pedro es mayor que Juan. (Pedro tiene 5 años y Juan 12) -> (False)
+* a <- 12, b <- 14, a 'es igual a' b (False)
+Contraejemplos:
+* El arroz con pollo es el plato más rico. (...)
+* Falcao ha sido el mejor delantero de la historia de Colombia. (...)
+* El Real Madrid es el mejor equipo de la historia. (...)
+* Las playas de La Habana son las más bonitas del Caribe. (...)
