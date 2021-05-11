@@ -16,6 +16,10 @@ b = int(input('Ingrese el segundo valor: '))
 c = a + b
 if c > 0:
     print("La sumatoria es positiva")
+else:
+    print(f"El resultado fue {c} y es negativo")
+
+
 
 
 
