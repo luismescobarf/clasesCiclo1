@@ -18,24 +18,42 @@
 # 9) Sumamos al valor total de los productos el acumulado
 # de impuestos.
 
+from logica import precioFinalVenta as pfv
+from logica import precioFinalVenta2 as pfv2
+from interfaz import bienvenida as bv
+from interfaz import recogerPrecio4Productos as r4p
+from interfaz import reporte as rp
+from interfaz import finalizacionExitosa as fe
+
 #Traducción LP -> Python
-producto1 = 1200000
-producto2 = 1500000
-producto3 = 350000
-producto4 = 4000000
-IVA = 0.19
-acumuladorImpuestos = 0
-#acumuladorImpuestos = acumuladorImpuestos + (producto1 * IVA)
-acumuladorImpuestos += producto1 * IVA
-acumuladorImpuestos += producto2 * IVA
-acumuladorImpuestos += producto3 * IVA
-acumuladorImpuestos += producto4 * IVA
-#precioTotalProductos = producto1 + producto2 + producto3 + producto4
-precioTotalProductos = sum((producto1,producto2,producto3,producto4))
-precioRealCompra = precioTotalProductos + acumuladorImpuestos
-print("Precio final de compra:",precioRealCompra)
+# producto1 = 1200000
+# producto2 = 1500000
+# producto3 = 350000
+# producto4 = 4000000
 
+#Interacción
+# print("-------------------------------------------")
+# print("Bienvenido: Aplicación Cálculo de Impuestos")
+# print("-------------------------------------------")
+bv()
+# producto1 = float(input('Ingrese el valor del primer producto: '))
+# producto2 = float(input('Ingrese el valor del segundo producto: '))
+# producto3 = float(input('Ingrese el valor del tercer producto: '))
+# producto4 = float(input('Ingrese el valor del cuarto producto: '))
+producto1,producto2,producto3,producto4 = r4p()
 
+#Lógica
+#precioRealCompra = pfv(producto1,producto2,producto3,producto4)
+precioRealCompra = pfv2(producto1,producto2,producto3,producto4)
+
+#Interacción
+#print("Precio final de compra:",precioRealCompra)
+print(rp(precioRealCompra))
+# print("-------------------------------------------")
+# print("Finalización Exitosa")
+# print("-------------------------------------------")
+fe()
+ 
 
 
 
