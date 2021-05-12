@@ -1,0 +1,12 @@
+- Recibir tres números enteros diferentes y determinar
+con condicionales cuál es el mayor.
+
+- Aporte de Héctor:
+
+Este problema esta bonito: Una viejecita llevaba huevos al mercado cuando se le cayó la cesta.
+
+Los que estaban alrededor le preguntaron: “¿Cuántos huevos llevabas?”
+
+A lo que ella contestó: “No me acuerdo, pero sé que si los agrupaba de 2 en 2 me sobraba uno; si los agrupaba de 3 en 3 me sobraban 2; si los agrupaba de 4 en 4 me sobraban 3; y si los agrupaba de 5 en 5 me sobraban 4.”
+
+Así pues, la pregunta es: ¿Cuántos huevos llevaba la viejecita?
