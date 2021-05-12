@@ -1,0 +1,14 @@
+- Se necesita una solución que reciba 3 números
+por teclado y determine cuántos de esos números son múltiplos 
+de 3 y cuántos son múltiplos de 5.
+
+15 -> 5 * 3
+50 -> 5 * 10
+44 -> 5 * ...
+
+MOD -> Residuo (%)
+15 MOD 5 -> 0 : 15 % 5 -> 15 % 5 == 0; not(15 % 5 > 0)
+15 MOD 3 -> 0
+44 MOD 5 -> 4
+44 MOD 3 -> 2
+
