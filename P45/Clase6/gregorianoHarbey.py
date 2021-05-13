@@ -20,9 +20,22 @@ def algBisiesto(year):
     else:
         print(f'---> El año {year} NO es bisiesto')
 
-    return 
+    #return 
 
 # main section
 saludo()
-year = datos()
-algBisiesto(year)
+#year = datos()
+#algBisiesto(year)
+
+#Casos de Prueba
+print("Casos BISIESTOS")
+algBisiesto(2000)
+algBisiesto(2400)
+algBisiesto(2020)
+print("Casos NO BISIESTOS")
+algBisiesto(1800)
+algBisiesto(1900)
+algBisiesto(2100)
+algBisiesto(2200)
+algBisiesto(2300)
+algBisiesto(2500)
