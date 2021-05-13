@@ -10,7 +10,7 @@ def CalcularAñoBisiesto(Año):
         else:
             AñoBisiesto = True    
 
-    if AñoBisiesto == True:
+    if AñoBisiesto:
         return f"\n El año {Año} es bisiesto"
     else:
         return f"\n El año {Año} no es bisiesto"
