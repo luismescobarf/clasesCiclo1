@@ -7,9 +7,9 @@ con condicionales cuál es el mayor.
 
 print("Ingrese tres números enteros diferentes")
 
-Num1 = input()
-Num2 = input()
-Num3 = input()
+Num1 = int(input())
+Num2 = int(input())
+Num3 = int(input())
 
 print("Revisión de tipos ingresados")
 print(type(Num1))
