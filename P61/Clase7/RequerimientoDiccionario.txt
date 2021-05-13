@@ -7,11 +7,11 @@ de selección de personal. La información que llega del candidato
 es la siguiente:
 1) Nombre completo
 2) Documento de identidad
-3) Años de experiencia desarrollando en el lenguaje Java.
-4) Años de experiencia desarrollando en el lenguaje Pascal.
-5) Años de experiencia desarrollando en .NET.
+3) Años de experiencia desarrollando en el lenguaje Java. (0,1,2,'3+')
+4) Años de experiencia desarrollando en el lenguaje Pascal. (0,1,2,'3+')
+5) Años de experiencia desarrollando en .NET. (0,1,2,'3+')
 6) Nivel de estudios (Técnico, Profesional, Posgrado)
-7) Años de egreso de la institución educativa.
+7) Años de egreso de la institución educativa. (0,1,'2+')
 
 El candidato será apto para la siguiente ronda si cumple con los siguiente:
 - Experiencia promedio de las tecnologías mencionadas
