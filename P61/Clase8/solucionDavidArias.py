@@ -1,3 +1,33 @@
+def consultarBD(id):
+
+    #Base de Datos
+    candidato1={
+            "nombreCompleto":"Pedro Picapiedra",
+            "documentoIdentidad":"1200AC",
+            "experienciaJava":"3+",
+            "experienciaPascal":"3+",
+            "experienciaNet":1.5,
+            "nivelEstudios":"Profesional",
+            "aEgreso":"2+"
+    }
+    candidato2={
+            "nombreCompleto":"Tripulante MinTIC2022",
+            "documentoIdentidad":"101010",
+            "experienciaJava":1,
+            "experienciaPascal":1,
+            "experienciaNet":"3+",
+            "nivelEstudios":0,
+            "aEgreso":0
+    }
+
+    #Relación de tipos: int -> booleanos
+    #                    0 -> False
+    #                    Diferente de 0 -> True
+    if id:
+        return candidato1
+    else:
+        return candidato2
+
 def evaluarCandidato(candidato):
     experienciaJava=float()
     if isinstance(candidato["experienciaJava"],str): #verifica si la variable es de x tipo, devuelve booleano
@@ -31,5 +61,11 @@ def evaluarCandidato(candidato):
         return candidato["nombreCompleto"]+" aprobado a segunda ronda"           
     else:
         return candidato["nombreCompleto"]+" No aprobado"
+
+#Ejecución
+candidato = consultarBD(0) #Consultar el candidato a la base de datos
+print(evaluarCandidato(candidato))#Revisar y reportar
+candidato = consultarBD(1) #Consultar el candidato a la base de datos
+print(evaluarCandidato(candidato))#Revisar y reportar
 
 
