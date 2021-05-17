@@ -4,11 +4,11 @@ def consultarBD(id):
     candidato1={
             "nombreCompleto":"Pedro Picapiedra",
             "documentoIdentidad":"1200AC",
-            "experienciaJava":"3+",
-            "experienciaPascal":"3+",
-            "experienciaNet":1.5,
+            "experienciaJava":0.5,
+            "experienciaPascal":0.5,
+            "experienciaNet":9,
             "nivelEstudios":"Profesional",
-            "aEgreso":"2+"
+            "aEgreso":0
     }
     candidato2={
             "nombreCompleto":"Tripulante MinTIC2022",
@@ -54,7 +54,9 @@ def evaluarCandidato(candidato):
     else:
         aEgreso=candidato["aEgreso"]
     promedioExperiencia=(experienciaJava+experienciaPascal+experienciaNet)/3
-    if promedioExperiencia>=2.5:
+    #if promedioExperiencia>=2.5: #Requerimiento original
+    #Fortalecimiento planteado por Edgar y Héctor
+    if promedioExperiencia>=2.5 and experienciaJava >= 1.5 and experienciaPascal>= 1.5 and experienciaNet >= 1.5:
         return candidato["nombreCompleto"]+" aprobado a segunda ronda"
     #elif promedioExperiencia>=1.5 and promedioExperiencia<=2.5:
     elif promedioExperiencia>=1.5 and aEgreso>=2:        
