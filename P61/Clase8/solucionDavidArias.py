@@ -26,10 +26,10 @@ def evaluarCandidato(candidato):
     promedioExperiencia=(experienciaJava+experienciaPascal+experienciaNet)/3
     if promedioExperiencia>2.5:
         return candidato["nombreCompleto"]+" aprobado a segunda ronda"
-    elif promedioExperiencia>=1.5 and promedioExperiencia<=2.5:
-        if aEgreso>2:
-            return candidato["nombreCompleto"]+" aprobado a segunda ronda"
-        else:
-            return candidato["nombreCompleto"]+" No aprobado"
+    #elif promedioExperiencia>=1.5 and promedioExperiencia<=2.5:
+    elif promedioExperiencia>=1.5 and aEgreso>=2:        
+        return candidato["nombreCompleto"]+" aprobado a segunda ronda"           
     else:
         return candidato["nombreCompleto"]+" No aprobado"
+
+
