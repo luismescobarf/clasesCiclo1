@@ -14,5 +14,8 @@ id_prestamo =  informacion['id_prestamo']
 casado = informacion['casado'] == 'Si'
 
 
+# variable = cp < 180
+# return {'id_prestamo':informacion['id_prestamo'], 'aprobado':variable}
+
 
 
