@@ -13,12 +13,12 @@ es la siguiente:
 6) Nivel de estudios (0,"Técnico", "Profesional", "Posgrado")
 7) Años de egreso de la institución educativa. (0,1,'2+')
 
-El candidato será apto para la siguiente ronda si cumple con los siguiente:
-- Experiencia promedio de las tecnologías mencionadas
+El candidato será apto para la siguiente ronda si cumple con lo siguiente:
+-* Experiencia promedio de las tecnologías mencionadas
 mayor o igual a 1.5 años.
-- Mínimo 2 años de egresado.
+-* Mínimo 2 años de egresado.
 - Si presenta un promedio de experiencia con las tecnologías
-mayor a 2.5 años, entonces se ignora el tiempo de egreso.
+mayor o igual 2.5 años, entonces se ignora el tiempo de egreso y se aprueba.
 
 Observaciones: Algunos campos pueden llegar en formato string
 al tratarse de un formulario con rangos.

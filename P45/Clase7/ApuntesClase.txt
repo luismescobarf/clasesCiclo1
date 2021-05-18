@@ -1,0 +1,6 @@
+- Cadenas -> Sucesiones de elementos alfanuméricos: números
+tratados como letras, letras, caracteres especiales (espacios,
+signos de puntuación, tabulaciones, movimientos de carro)
+
+return f"El equipo ha sido aprobado"
+mensaje = "hola"
