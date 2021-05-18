@@ -73,4 +73,3 @@ semiurbana = informacion['tipo_propiedad'] == 'Semi Urbana'
 
 
 
-
