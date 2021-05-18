@@ -44,7 +44,21 @@ casado = informacion['casado'] == 'Si'
 #Primera forma
 #dependientes = estandarizarAlfanumerico(informacion['dependientes'])
 
-#Segunda forma
+# #Segunda forma (a)
+# dependientes = int()
+# if isinstance(informacion['dependientes'],int):
+#     dependientes = informacion['dependientes']
+# else:
+#     dependientes = 3
+
+# #Condicional en una sola línea Python (bonus)
+# if condicion:
+#     (h.v. -> retorno)
+# else:
+#     (h.f. -> retorno)
+# (h.v.) if condicion else (h.f.)
+
+#Segunda forma (b)
 dependientes = informacion['dependientes'] if isinstance(informacion['dependientes'],int) else 3
 
 #--------------------------
@@ -63,7 +77,12 @@ independiente = informacion['independiente'] == 'Si'
 
 semiurbana = informacion['tipo_propiedad'] == 'Semi Urbana'
 
-#Copias de los campos del diccionario
+#Copias de los campos del diccionario que no necesitaban estandarización
+i_d = informacion['ingreso_deudor']
+i_c = informacion['ingreso_codeudor']
+c_p = informacion['cantidad_prestamo']
+p_p = informacion['plazo_prestamo']
+
 
 #Arbol de decisiones
 
