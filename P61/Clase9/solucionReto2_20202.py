@@ -75,7 +75,8 @@ def prestamo(informacion):
     else:
         #No cuenta con historia creditica, proceder a revisar variables (entorno, ingresos, etc)
         if independiente:
-            if not(casado and dependientes > 1):
+            #if not(casado and dependientes > 1):
+            if not(casado) or not(dependientes > 1):
                 if i_d / 10 > c_p or i_c / 10 > c_p:
                     #Revisar top, entorno inestable de trabajo
                     decision = c_p < 180

@@ -33,4 +33,4 @@ caso3=dict(id_prestamo='RETOS2_003',
     cantidad_prestamo=110,
     plazo_prestamo=360,
     historia_credito=1,
-    tipo_propiedad='Semiurbano')
+    tipo_propiedad='Semi Urbano')
