@@ -15,6 +15,8 @@
 #     informaro cuántos de los ingresados fueron múltiplos de 5
 #     y cuántos fueron múltiplos de 3
 
+#Múltiplo 5 -> 5 * cantidad; 25 -> 5 * 5
+
 #Traducción a Python
 contadorMultiplos3 = 0
 contadorMultiplos5 = 0
