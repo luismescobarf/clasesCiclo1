@@ -1,0 +1,5 @@
+-> Ciclos o estructuras iterativas:
+Condicionales!! Además de camino alterno, repetir camino alterno.
+
+while -> Mientras -> Cuando no es tan claro el número de veces que se va a iterar
+for -> Para -> Cuando está claro (limInferior limSuperior Avance) -> Recorrer contenedores
