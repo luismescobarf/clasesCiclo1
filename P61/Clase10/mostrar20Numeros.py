@@ -20,5 +20,6 @@
 #Acercar la notación del while al for
 x = 1
 while(x<=20):
-    print(x,end=" ")
+    print(x,end = " ")
     x += 1
+
