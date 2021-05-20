@@ -48,6 +48,9 @@ print(f"Número Pares Ingresados : {len(coleccionNumerosPares)} Colección: {sol
 print(f"Número Impares Ingresados : {len(coleccionNumerosImpares)} Colección: {soloNumerosImpares}")
 
 
+#pares = [2,4]
+#pares = [ [2,6], [4,7] ]
+
 
 
 
