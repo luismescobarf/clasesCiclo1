@@ -1,0 +1,32 @@
+Contenedor de Datos (Sistema de Información)
+--------------------------------------------
+CRUD -> Create Read Update Delete (SI o C. Mutable)
+
+Recordemos en el inmutable como las cadenas:
+* Create -> Asignación de una cadena a una variable
+* Read -> - Consultar el contenido de la cadena
+        - Consultar el contenido de cada una de las posiciones
+        de la cadena (caracteres de la cadena) con índices
+        o subíndices (variables que alojan índices.)
+        - Slices (rangos)
+https://www.w3schools.com/python/python_strings.asp
+
+Listas: Sí son mutables y pueden contener en cada una de sus
+        posiciones diferentes tipos de datos.
+https://www.w3schools.com/python/python_lists_methods.asp
+
+* Create -> Asignación de una colección de elementos entre []
+            y separados por comas
+* Read ->   - Consultar el contenedor
+            - Consultar una posición del contenedor
+            - Slices
+* Update -> - Podemos actualizar el contenido de cada uno de los
+              elementos que colecciona.
+            - Puede cambiar de tamaño: append(), insert()            
+Ejemplos trabajados en clase update lista
+prueba = [3, 'hola', False, 'ya no hay una cadena vacA', -18, 'ola k ase', False]
+prueba[3] = prueba[3][0].lower() + prueba[3][1:-1]  + prueba[3][-1].upper()
+prueba[3] = prueba[3][0].lower() + prueba[3][1:len(prueba[3])-1]  + prueba[3][-1].upper()
+
+* Delete -> - Eliminar elementos: último o una posición
+              específica pop()
