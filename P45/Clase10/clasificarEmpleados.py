@@ -57,7 +57,7 @@ def impuestosEmpleados():
     for empleado in bdEmpleados:
         salarioPromedio += empleado[-1]
     salarioPromedio = salarioPromedio / len(bdEmpleados)
-    print(f"El slario promedio de la nómina ingresada es {salarioPromedio}")
+    print(f"El slario promedio de la nómina ingresada es {round(salarioPromedio,2)}")
 
     #Retornar los listados solicitados
     return bdEmpleados, empleadosImpuestos
