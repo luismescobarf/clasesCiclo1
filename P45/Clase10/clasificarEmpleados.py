@@ -40,6 +40,9 @@ def impuestosEmpleados():
         #if infoEmpleado[-1] > 10000:
         if bdEmpleados[-1][-1] > 10000:
             #Colección (lista) empleados que pagan impuestos            
+            #Por referencia
+            #empleadosImpuestos.append(bdEmpleados[-1])
+            #Por parámetro
             empleadosImpuestos.append(bdEmpleados[-1].copy())
             #empleadosImpuestos.append(list(bdEmpleados[-1]))
             #Agregar los impuestos en la penúltima posición            
