@@ -25,6 +25,12 @@ print(conjunto)
 #Requerimiento: Revisar de una base de datos de transacciones,
 #los departamentos han hecho aportes y los que faltan por hacerlo. 
 #Retornar un listado de cada grupo de departamentos.
+
+#Requerimientos adicionales (propuestos -> Foro, Siguiente clase): 
+# Cuál es el departamento que más ha aportado?
+# Cuál es el promedio de aportes general?
+# Si es un departamento que ha aportado varias veces, cuál es su promedio de aporte?
+
 bdTransacciones = (
     { 'id':'A3456', 'depto':'Cundinamarca', 'concepto':'Puentes', 'valor':750 },
     { 'id':'B56G', 'depto':'Valle', 'concepto':'Parques', 'valor':100 },
@@ -48,12 +54,14 @@ def listadosDepartamentosAportes(bdTransacciones):
     #deptosAportantes = list()
     deptosPendientes = set()
     deptosAportantes = set()
-    for transaccion in bdTransacciones:
-        deptosAportantes.add(transaccion['depto'])
+    # for transaccion in bdTransacciones:
+    #     deptosAportantes.add(transaccion['depto'])
+    for i in range(len(bdTransacciones)):
+        deptosAportantes.add(bdTransacciones[i]['depto'])
     deptosPendientes = conjunto.difference(deptosAportantes)
-    deptosPendientes = list(deptosPendientes)
-    deptosAportantes = list(deptosAportantes)
-    return deptosAportantes, deptosPendientes
+    # deptosPendientes = list(deptosPendientes)
+    # deptosAportantes = list(deptosAportantes)
+    return list(deptosAportantes), list(deptosPendientes)
 
 #Sección principal
 listaDeptosAportantes, listaDeptosPendientes = listadosDepartamentosAportes(bdTransacciones)
