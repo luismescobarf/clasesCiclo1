@@ -90,6 +90,11 @@ matrizCostos = calcularMatrizCostos(redDiccionarioAnidado)
 
 print(matrizCostos)
 
+#Consultar la estrategia del vecino más cercano e intentar implementarla
+#sobre esta codificiación del problema
+
+
+
 
 
 
