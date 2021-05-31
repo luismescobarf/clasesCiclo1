@@ -46,11 +46,11 @@ red = {
 }
 
 redDiccionarioAnidado = {
-    'A':{'x':8,'y':11},
-    'B':{'x':7,'y':8},
-    'C':{'x':9.5,'y':5},
-    'D':{'x':9,'y':7},
-    'E':{'x':10,'y':10},
+    'Armenia':{'x':8,'y':11},
+    'Pereira':{'x':7,'y':8},
+    'Cali':{'x':9.5,'y':5},
+    'Cartago':{'x':9,'y':7},
+    'Manizales':{'x':10,'y':10},
 }
 #Componente en x del punto A -> redDicccionarioAnidado['A']['x']
 
@@ -88,6 +88,15 @@ print(matrizCostos)
 
 #Consultar la estrategia del vecino más cercano e intentar implementarla
 #sobre esta codificiación del problema
+
+# #Algoritmo o el pseudocódigo del Vecino Más Cercano
+# 1) Establecer nodo o ciudad de partida
+# 2) Iniciar el itinerario (tour) en la ciudad de partida establecida
+# 3) Mientras tengamos ciudades sin cubrir o incluir en el itinerario
+# 4)      Desde la última ciudad del itinerario generamos las salidas a las demás ciudades
+# 5)      Seleccionar la mejor de las salidas
+# 6)      Actualizar las ciudades sin cubrir
+# 7)      Agregar al itinerio la mejor de las salidas
 
 
 
