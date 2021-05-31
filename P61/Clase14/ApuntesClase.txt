@@ -1,0 +1,3 @@
+Problema Agente Viajero Simétrico (Constructivo - NN)
+-----------------------------------------------------
+Distancia TSP Clásico -> distanciaEuclidiana_p1_p2 = int((((p_1[0] - p_2[0])**2 + (p_1[1] - p_2[1])**2)**(1/2))+0.5)
