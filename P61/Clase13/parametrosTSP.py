@@ -35,6 +35,7 @@ red = [
     ('D',(9,7)),
     ('E',(10,10)),
 ]
+#print(red[0][1][0])
 
 #Red representad con un diccionario
 red = {
