@@ -56,25 +56,21 @@ redDiccionarioAnidado = {
 
 #Distancia euclidiana (2D)
 def distanciaEUC_2D(punto1,punto2):
-    return  ((punto1[0] - punto2[0])**2 + (punto1[1] - punto2[1])**2)**(1/2)
+    return  int((((punto1[0] - punto2[0])**2 + (punto1[1] - punto2[1])**2)**(1/2))+0.5)
 
 def distanciaEUC_2D_V2(punto1,punto2):
-    return  ((punto1['x'] - punto2['x'])**2 + (punto1['y'] - punto2['y'])**2)**(1/2)
+    return  int((((punto1['x'] - punto2['x'])**2 + (punto1['y'] - punto2['y'])**2)**(1/2))+0.5)
 
 #Función para el cálculo de la matriz de costos
 def calcularMatrizCostos(red):
     #Generalizar para calcular todas las posibles conexiones
-    matrizCostos = dict()
-    M = 99999999
+    matrizCostos = dict()    
     for nombre_i,punto_i in red.items():
-        for nombre_j, punto_j in red.items():
-            costo = int()
+        for nombre_j, punto_j in red.items():            
             if nombre_i != nombre_j:
                 #costo = int(distanciaEUC_2D(red[nombre_i],red[nombre_j]))
-                costo = int(distanciaEUC_2D_V2(red[nombre_i],red[nombre_j]))                
+                costo = distanciaEUC_2D_V2(red[nombre_i],red[nombre_j])                
                 matrizCostos[ nombre_i+"-"+nombre_j ] = costo
-            #else:
-            #    costo = M
     return matrizCostos
 
 
@@ -82,7 +78,7 @@ def calcularMatrizCostos(red):
 ############################
 
 #Ejemplo distancia entre A y B:
-distanciaA_B = { 'A-B': int(distanciaEUC_2D(red['A'],red['B'])) }
+distanciaA_B = { 'A-B': distanciaEUC_2D(red['A'],red['B']) }
 print(distanciaA_B)
         
 matrizCostos = calcularMatrizCostos(redDiccionarioAnidado)
