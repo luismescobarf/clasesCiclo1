@@ -89,15 +89,23 @@ print(matrizCostos)
 #Consultar la estrategia del vecino más cercano e intentar implementarla
 #sobre esta codificiación del problema
 
-# #Algoritmo o el pseudocódigo del Vecino Más Cercano
-# 1) Establecer nodo o ciudad de partida
-# 2) Iniciar el itinerario (tour) en la ciudad de partida establecida
-# 3) Mientras tengamos ciudades sin cubrir o incluir en el itinerario
-# 4)      Desde la última ciudad del itinerario generamos las salidas a las demás ciudades (no cubiertas)
-# 5)      Seleccionar la mejor de las salidas
-# 6)      Actualizar las ciudades sin cubrir
-# 7)      Agregar al itinerio la mejor de las salidas
-# 8) Agregar al itinerario el regreso a la ciudad inicial o de partida
+# #Algoritmo o el pseudocódigo del Vecino Más Cercano MTSP (Jornadas del Agente)
+# 1) Establecer nodo o ciudad de partida (radicado el Agente)
+# 2) Preparar contenedor de jornadas
+# 3) Iniciar el itinerario (tour) en la ciudad de partida establecida
+# 4) Mientras tengamos ciudades sin cubrir o incluir en los itinerarios
+# 5)      Desde la última ciudad del itinerario actual generamos las salidas a las demás ciudades (no cubiertas)
+# 6)      Seleccionar la mejor de las salidas
+# 7)      Si agregar la ciudad no supera el tiempo máximo de jornada:
+# 8)            Agregar la ciudad (mejor de las salidas) al itinerario actual (crecimiento)
+# 9)      De lo contrario:
+# 10)            Cerrar itinerario con el retorno y agregarlo a las jornadas (días)
+# 11)            Abrir el itinerario con la mejor ciudad que no fue acomodada en el itinerario anterior
+# 12)     Actualizar las ciudades sin cubrir
+# 13) Si el itinerario que estaba en construcción no fue agregado a las jornadas:
+# 14)    Agregarlo
+# 15) Mostrar las jornadas
+# 16) Generar indicadores de las jorandas
 
 #Traducción a Python
 print('-----Algoritmo Heurístico del Vecino Más Cercano MTSP-----')
@@ -108,7 +116,7 @@ itinerario.append(ciudadInicial)
 ciudadesSinCubrir = set(red.keys())
 ciudadesSinCubrir.remove(ciudadInicial)
 jornadasTSP = list()#Separar en jornadas para regreso del agente viajero
-duracionMaxJornada = 10
+duracionMaxJornada = 9
 #Sección principal del algoritmo (cubrir todas las ciudades como ciclo hamiltoniano)
 while len(ciudadesSinCubrir) > 0:
     #Construir el listado con las posibles salidas desde la última ciudad ingresada en el itinerario
