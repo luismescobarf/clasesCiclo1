@@ -101,16 +101,36 @@ print(matrizCostos)
 
 #Traducción a Python
 print('-----Algoritmo Heurístico del Vecino Más Cercano-----')
+#Inicialización del tour y el conjunto de control de ciudades cubiertas
 ciudadInicial = 'Manizales'
 itinerario = list()
 itinerario.append(ciudadInicial)
 ciudadesSinCubrir = set(red.keys())
 ciudadesSinCubrir.remove(ciudadInicial)
+#Sección principal del algoritmo (cubrir todas las ciudades como ciclo hamiltoniano)
 while len(ciudadesSinCubrir) > 0:
+    #Construir el listado con las posibles salidas desde la última ciudad ingresada en el itinerario
     listadoSalidas = list()
     for ciudadSalida in ciudadesSinCubrir:
         listadoSalidas.append(  (ciudadSalida, matrizCostos[ itinerario[-1]+'-'+ciudadSalida  ]) )
     listadoSalidas = tuple(listadoSalidas)
+    #Seleccionar la mejor salida
+    mejorSalida = listadoSalidas[0]
+    for salida in listadoSalidas[1:]:
+        if mejorSalida[1] > salida[1]:
+            mejorSalida = salida
+    #Actualizar el itinerario
+    itinerario.append(mejorSalida[0])
+    #Actualizar el conjunto (entrando en el itinerario la ciudad ahora está cubierta)
+    ciudadesSinCubrir.remove(mejorSalida[0])
+
+#Retorno a la ciudad base
+itinerario.append(ciudadInicial)
+
+#Visualizar recorrido resultante
+print('Itinerario resultante: ',itinerario)
+    
+
     
     
     
