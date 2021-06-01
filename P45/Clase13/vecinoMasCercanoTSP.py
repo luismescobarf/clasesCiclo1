@@ -129,6 +129,12 @@ itinerario.append(ciudadInicial)
 
 #Visualizar recorrido resultante
 print('Itinerario resultante: ',itinerario)
+
+#Cuantificar la calidad de la solución
+fo = 0
+for i in range(len(itinerario)-1):
+    fo += matrizCostos[itinerario[i]+'-'+itinerario[i+1]]
+print("Función Objetivo (calidad) solución = ",fo)
     
 
     

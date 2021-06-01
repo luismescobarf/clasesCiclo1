@@ -100,13 +100,15 @@ print(matrizCostos)
 # 8) Agregar al itinerario el regreso a la ciudad inicial o de partida
 
 #Traducción a Python
-print('-----Algoritmo Heurístico del Vecino Más Cercano-----')
+print('-----Algoritmo Heurístico del Vecino Más Cercano MTSP-----')
 #Inicialización del tour y el conjunto de control de ciudades cubiertas
 ciudadInicial = 'Manizales'
 itinerario = list()
 itinerario.append(ciudadInicial)
 ciudadesSinCubrir = set(red.keys())
 ciudadesSinCubrir.remove(ciudadInicial)
+jornadasTSP = list()#Separar en jornadas para regreso del agente viajero
+duracionMaxJornada = 10
 #Sección principal del algoritmo (cubrir todas las ciudades como ciclo hamiltoniano)
 while len(ciudadesSinCubrir) > 0:
     #Construir el listado con las posibles salidas desde la última ciudad ingresada en el itinerario
@@ -119,16 +121,42 @@ while len(ciudadesSinCubrir) > 0:
     for salida in listadoSalidas[1:]:
         if mejorSalida[1] > salida[1]:
             mejorSalida = salida
-    #Actualizar el itinerario
-    itinerario.append(mejorSalida[0])
+
+    #Antes de actualizar itinerario, revisar si es una jornada viable
+    duracion = 0
+    for i in range(len(itinerario)-1):
+        duracion += matrizCostos[itinerario[i]+'-'+itinerario[i+1]]
+    duracion += matrizCostos[itinerario[-1]+'-'+mejorSalida[0]]
+    duracion += matrizCostos[mejorSalida[0]+'-'+ciudadInicial]
+    if duracion <= duracionMaxJornada:
+        #Actualizar el itinerario
+        itinerario.append(mejorSalida[0])        
+    else:
+        #Cerrar el itinerario actual
+        itinerario.append(ciudadInicial)
+        #Agregarlo al listado de las jornadas
+        jornadasTSP.append(list(itinerario))
+        #Abrir itinerario nuevo
+        itinerario.clear()
+        itinerario = [ciudadInicial,mejorSalida[0]]
+    
     #Actualizar el conjunto (entrando en el itinerario la ciudad ahora está cubierta)
-    ciudadesSinCubrir.remove(mejorSalida[0])
+    ciudadesSinCubrir.remove(mejorSalida[0])    
 
-#Retorno a la ciudad base
+#Ingresar el último itinerario si hace falta
 itinerario.append(ciudadInicial)
+if jornadasTSP[-1] != itinerario:
+    jornadasTSP.append(list(itinerario))
 
-#Visualizar recorrido resultante
-print('Itinerario resultante: ',itinerario)
+#Visualizar los itinerarios generados
+print(':::::Itinerarios::::::')
+[print(jornada) for jornada in jornadasTSP]
+
+# #Cuantificar la calidad de la solución
+# fo = 0
+# for i in range(len(itinerario)-1):
+#     fo += matrizCostos[itinerario[i]+'-'+itinerario[i+1]]
+# print("Función Objetivo (calidad) solución = ",fo)
     
 
     
