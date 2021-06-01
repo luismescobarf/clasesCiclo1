@@ -160,6 +160,24 @@ if jornadasTSP[-1] != itinerario:
 print(':::::Itinerarios::::::')
 [print(jornada) for jornada in jornadasTSP]
 
+#Función para calcular duración de los itinerarios
+def calcularDuracion(itinerario,matrizCostos):
+    duracion = 0
+    for i in range(len(itinerario)-1):
+        duracion += matrizCostos[itinerario[i]+'-'+itinerario[i+1]]    
+    return duracion
+
+#Generar contenedor ampliado de los itinerarios
+print('Diccionario Detalle Jornadas')
+jornadasDetalle = dict()
+for i,jornada in enumerate(jornadasTSP):
+    jornadasDetalle[f"Jornada{i+1}"] = { 'itinerario':jornada, 'duracion':calcularDuracion(jornada,matrizCostos)}
+
+#Mostrar en pantalla
+[print(llave,valor) for llave,valor in jornadasDetalle.items()]
+
+#Ejercicio propuesto: Obtener la duración promedio del diccionario generado
+
 # #Cuantificar la calidad de la solución
 # fo = 0
 # for i in range(len(itinerario)-1):
