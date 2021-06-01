@@ -45,7 +45,7 @@ red = {
     'E':(10,10)
 }
 
-redDiccionarioAnidado = {
+red = {
     'Armenia':{'x':8,'y':11},
     'Pereira':{'x':7,'y':8},
     'Cali':{'x':9.5,'y':5},
@@ -78,10 +78,10 @@ def calcularMatrizCostos(red):
 ############################
 
 #Ejemplo distancia entre A y B:
-distanciaA_B = { 'A-B': distanciaEUC_2D(red['A'],red['B']) }
+distanciaA_B = { 'Armenia-Cali': distanciaEUC_2D_V2(red['Armenia'],red['Cali']) }
 print(distanciaA_B)
         
-matrizCostos = calcularMatrizCostos(redDiccionarioAnidado)
+matrizCostos = calcularMatrizCostos(red)
 [print(llave,' ',valor) for llave,valor in matrizCostos.items()]
 
 print(matrizCostos)
@@ -93,10 +93,33 @@ print(matrizCostos)
 # 1) Establecer nodo o ciudad de partida
 # 2) Iniciar el itinerario (tour) en la ciudad de partida establecida
 # 3) Mientras tengamos ciudades sin cubrir o incluir en el itinerario
-# 4)      Desde la última ciudad del itinerario generamos las salidas a las demás ciudades
+# 4)      Desde la última ciudad del itinerario generamos las salidas a las demás ciudades (no cubiertas)
 # 5)      Seleccionar la mejor de las salidas
 # 6)      Actualizar las ciudades sin cubrir
 # 7)      Agregar al itinerio la mejor de las salidas
+# 8) Agregar al itinerario el regreso a la ciudad inicial o de partida
+
+#Traducción a Python
+print('-----Algoritmo Heurístico del Vecino Más Cercano-----')
+ciudadInicial = 'Manizales'
+itinerario = list()
+itinerario.append(ciudadInicial)
+ciudadesSinCubrir = set(red.keys())
+ciudadesSinCubrir.remove(ciudadInicial)
+while len(ciudadesSinCubrir) > 0:
+    listadoSalidas = list()
+    for ciudadSalida in ciudadesSinCubrir:
+        listadoSalidas.append(  (ciudadSalida, matrizCostos[ itinerario[-1]+'-'+ciudadSalida  ]) )
+    listadoSalidas = tuple(listadoSalidas)
+    
+    
+    
+
+
+
+
+
+
 
 
 
