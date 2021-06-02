@@ -134,20 +134,9 @@ print('Distancia consultada Cartago-Manizales: ', conexiones['Cartago-Manizales'
 # 7)            Agregar la "mejor" salida al itinerario actual
 # 8)      De lo contrario:
 # 9)            Cierre el itinerario actual
-# 10)            Agregarlo a la programación de itinerario o jornadas (colección)
-# 11)            Abrir un nuevo itinerario con la mejor salida
+# 10)           Agregarlo a la programación de itinerario o jornadas (colección)
+# 11)           Abrir un nuevo itinerario con la mejor salida
 # 12) Revisar si hay un itinerario pendiente no cerrado, cerraro y agregarlo en las jornadas
-
-
-
-
-
-
-
-# 5)      Agregar la "mejor" salida al itinerario
-# 6) Agregar el retorno a la primera ciudad
-# 7) Mostrar itinerario
-
 
 
 #Traducción a Python
@@ -188,6 +177,21 @@ itinerario.append(ciudadInicial)
 
 #Mostrar el itinerario generado
 print('Itinerario: ',itinerario)
+
+#Obtener el costo de una solución
+#Itinerario:  ['Manizales', 'Armenia', 'Pereira', 'Cartago', 'Cali', 'Manizales']
+def calcularCosto(itinerario,conexiones):
+    costo = 0
+    for i in range(len(itinerario)-1):
+        transicionConsultar = itinerario[i] + "-" + itinerario[i+1]    
+        costo += conexiones[ transicionConsultar ]
+        #print('Transición ',i+1,':',transicionConsultar,"(",conexiones[ transicionConsultar ],")")
+    #print('****Costo del itinerario es ->',costo)
+    return costo
+# #Salida de prueba
+# print('****Costo del itinerario es ->',calcularCosto(itinerario,conexiones))
+
+
 
 
 
