@@ -1,0 +1,19 @@
+-> Problema del Agente Viajero Múltiple: mTSP
+----------------------------------------------
+- Agregar una o varias variables para limitar los itinerarios
+(limitar los tours)
+- Se espera como respuesta una colección de itinerarios
+
+#Construir solución mTSP -> Vecino más cercano limitando los viajes (pseudocódigo o algoritmo)
+# 1) Iniciar programación de itinerarios (coleccionar itinerarios o jornadas TSP).
+# 2) Seleccionar un punto para iniciar itinerario.
+# 3) Mientras haya ciudades sin cubrir:
+# 4)      Obtener todas las salidas desde la última ciudad agregada al itinerario actual a las ciudades sin cubrir
+# 5)      Identificar la "mejor" salida
+# 6)      Si es viable (carga de trabajo) agregar la ciudad al itinerario:
+# 7)            Agregar la "mejor" salida al itinerario actual
+# 8)      De lo contrario:
+# 9)            Cierre el itinerario actual
+# 10)           Agregarlo a la programación de itinerario o jornadas (colección)
+# 11)           Abrir un nuevo itinerario con la mejor salida
+# 12) Revisar si hay un itinerario pendiente no cerrado, cerraro y agregarlo en las jornadas

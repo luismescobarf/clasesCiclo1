@@ -124,6 +124,32 @@ print('Distancia consultada Cartago-Manizales: ', conexiones['Cartago-Manizales'
 # 6) Agregar el retorno a la primera ciudad
 # 7) Mostrar itinerario
 
+#Construir solución mTSP -> Vecino más cercano limitando los viajes (pseudocódigo o algoritmo)
+# 1) Iniciar programación de itinerarios (coleccionar itinerarios o jornadas TSP).
+# 2) Seleccionar un punto para iniciar itinerario.
+# 3) Mientras haya ciudades sin cubrir:
+# 4)      Obtener todas las salidas desde la última ciudad agregada al itinerario actual a las ciudades sin cubrir
+# 5)      Identificar la "mejor" salida
+# 6)      Si es viable (carga de trabajo) agregar la ciudad al itinerario:
+# 7)            Agregar la "mejor" salida al itinerario actual
+# 8)      De lo contrario:
+# 9)            Cierre el itinerario actual
+# 10)            Agregarlo a la programación de itinerario o jornadas (colección)
+# 11)            Abrir un nuevo itinerario con la mejor salida
+# 12) Revisar si hay un itinerario pendiente no cerrado, cerraro y agregarlo en las jornadas
+
+
+
+
+
+
+
+# 5)      Agregar la "mejor" salida al itinerario
+# 6) Agregar el retorno a la primera ciudad
+# 7) Mostrar itinerario
+
+
+
 #Traducción a Python
 print('----Algoritmo Vecino Más Cercano (NN Nearest Neighbour)')
 itinerario = list()#Lista con los nombres de las ciudades o puntos
