@@ -45,6 +45,7 @@
 
 #Solución comprensión de listas (Unidad4)
 print('Ingrese las palabras a revisar separadas por espacios:')
+
 #Predicado
 def tieneVocalesCerradas(palabra):
     hipotesisTieneVocalesCerradas = False
