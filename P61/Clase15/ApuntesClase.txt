@@ -16,4 +16,4 @@
 # 9)            Cierre el itinerario actual
 # 10)           Agregarlo a la programación de itinerario o jornadas (colección)
 # 11)           Abrir un nuevo itinerario con la mejor salida
-# 12) Revisar si hay un itinerario pendiente no cerrado, cerraro y agregarlo en las jornadas
+# 12) Revisar si hay un itinerario pendiente no cerrado, cerrarlo y agregarlo en las jornadas

@@ -1,5 +1,18 @@
 import sys
 
+#Obtener el costo de una solución
+#Itinerario:  ['Manizales', 'Armenia', 'Pereira', 'Cartago', 'Cali', 'Manizales']
+def calcularCosto(itinerario,conexiones):
+    costo = 0
+    for i in range(len(itinerario)-1):
+        transicionConsultar = itinerario[i] + "-" + itinerario[i+1]    
+        costo += conexiones[ transicionConsultar ]
+        #print('Transición ',i+1,':',transicionConsultar,"(",conexiones[ transicionConsultar ],")")
+    #print('****Costo del itinerario es ->',costo)
+    return costo
+# #Salida de prueba
+# print('****Costo del itinerario es ->',calcularCosto(itinerario,conexiones))
+
 #Requerimiento: recibimos una colección de coordenadas
 # de los nodos que constituyen una red o grafo, y se requiere
 # obtener la matriz de distancias correspondientes para cómputos
@@ -138,11 +151,13 @@ print('Distancia consultada Cartago-Manizales: ', conexiones['Cartago-Manizales'
 # 11)           Abrir un nuevo itinerario con la mejor salida
 # 12) Revisar si hay un itinerario pendiente no cerrado, cerraro y agregarlo en las jornadas
 
-
 #Traducción a Python
 print('----Algoritmo Vecino Más Cercano (NN Nearest Neighbour)')
+limiteCosto = 9
+jornadasTSP = list()
 itinerario = list()#Lista con los nombres de las ciudades o puntos
-ciudadInicial = redSesion[-1]['nombre']#Selecciono una ciudad inicial arbitraria
+#ciudadInicial = redSesion[-1]['nombre']#Selecciono una ciudad inicial arbitraria (Manizales)
+ciudadInicial = 'Cali'
 itinerario.append(ciudadInicial)
 ciudadesSinCubrir = set()
 for ciudad in redSesion:
@@ -166,32 +181,49 @@ while len(ciudadesSinCubrir) > 0: #Mientras haya ciudades sin cubrir:
         if mejorSalida[1] >= salida[1]:
             mejorSalida = salida
 
-    #Agregar la mejor
-    itinerario.append(mejorSalida[0])
+    #---->Cambio de la lógica frente a vecino más cercano para TSP:
+    #Coleccionar o no itinerarios (tomar decisión de ingresar a la programación el itinerario o hacerlo crecer)
+    
+    #Calcular el costo del itinerario actual
+    costoItinerarioActual = calcularCosto(itinerario,conexiones)
+    #Agregar costo a la mejor salida
+    costoItinerarioActual += mejorSalida[1]
+    #Agregar regreso a la ciudad inicial o base
+    llaveConexionRetorno = mejorSalida[0]+'-'+ciudadInicial
+    costoRetorno = conexiones[llaveConexionRetorno]
+    costoItinerarioActual += costoRetorno
 
-    #Actualizamos el conjunto de control
+    #Revisar si es viable
+    if costoItinerarioActual <= limiteCosto:
+        #Agregar la mejor
+        itinerario.append(mejorSalida[0])
+    else:
+        #Agregamos el retorno para cierre del itinerario
+        itinerario.append(ciudadInicial)
+        #Agregamos a las jornadas o a la programación
+        jornadasTSP.append(list(itinerario))
+        #Limpiamos el contenedor del itinerario actual para la siguiente iteración
+        itinerario.clear()
+        #Abrimos el nuevo itinerario
+        itinerario.append(ciudadInicial)
+        itinerario.append(mejorSalida[0])
+
+    #Eliminar la ciudad que ya ha sido cubierta
     ciudadesSinCubrir.remove(mejorSalida[0])
+
+#Revisar si ya fue ingresado el itinerario actual
+if jornadasTSP[-1][-1] != itinerario[-1]:
+    #Cierre del itinerario
+    itinerario.append(ciudadInicial)
+    #Agregamos a la programación
+    jornadasTSP.append(list(itinerario))
+
+#Mostrar jornadas
+print("---Programación Agente Viajero---")
+[print(jornada) for jornada in jornadasTSP]
 
 #Agregamos el retorno
 itinerario.append(ciudadInicial)
-
-#Mostrar el itinerario generado
-print('Itinerario: ',itinerario)
-
-#Obtener el costo de una solución
-#Itinerario:  ['Manizales', 'Armenia', 'Pereira', 'Cartago', 'Cali', 'Manizales']
-def calcularCosto(itinerario,conexiones):
-    costo = 0
-    for i in range(len(itinerario)-1):
-        transicionConsultar = itinerario[i] + "-" + itinerario[i+1]    
-        costo += conexiones[ transicionConsultar ]
-        #print('Transición ',i+1,':',transicionConsultar,"(",conexiones[ transicionConsultar ],")")
-    #print('****Costo del itinerario es ->',costo)
-    return costo
-# #Salida de prueba
-# print('****Costo del itinerario es ->',calcularCosto(itinerario,conexiones))
-
-
 
 
 
