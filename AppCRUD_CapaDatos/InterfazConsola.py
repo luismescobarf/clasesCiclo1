@@ -10,7 +10,7 @@ def mensaje(info=''):
 #Formulario menú aplicación CRUD
 def formularioMenuAppCRUD():
     print(" ")
-    print("-- Aplicación CRUD TareasPendientes ---")
+    print("-- Aplicación CRUD TareasPendientes ---\n")
     print("1. Adicionar Tarea")
     print("2. Consultar Tareas")
     print("3. Actualizar Tarea")

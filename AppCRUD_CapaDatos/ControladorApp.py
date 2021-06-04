@@ -74,7 +74,7 @@ while mainloop:
     elif opcion == 5:
         
         #Solicitar a la interfaz mostrar el mensaje
-        ic.mensaje("->Eliminar Tarea") 
+        ic.mensaje("->Ha salido de la aplicación.") 
 
         #Guardar el listado de tareas en la base de datos (archivo json)
         if CRUD.Write(tareas):            

@@ -32,6 +32,7 @@ def Update(tareas, identificador, tareaActualizada):
 #Eliminar una tarea específica (Delete)
 def Delete(tareas, identificador):
     tareas.pop(identificador)
+    print(f"\nTarea {identificador} eliminada.")
 
 #Operación de escritura en la capa de datos al cierre de la aplicación
 def Write(tareas, rutaArchivo='listadoTareas.json'):
