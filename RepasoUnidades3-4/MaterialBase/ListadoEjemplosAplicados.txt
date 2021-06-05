@@ -1,0 +1,22 @@
+Listado de temas y ejemplos aplicados
+-------------------------------------
+- Tipos de ciclos: while, do while y para (conteos).
+- Colecciones básicas y para qué sirve cada una.
+- Validación de arrobas en un correo electrónico ingresado por el usuario.
+- Extracción de nombres de usuarios.
+- Generación de un párrafo de manera pseudoaleatoria.
+- Obtener del párrafo los sustantivos, artículos o verbos.
+- Nóminas, impuesto y la copia por referencia.
+- Anidación de contenedores para representar situaciones un poco más complejas (Red Agente Viajero).
+- Conversión de tipos (partiendo de cadenas)
+- Conversión de elementos a diccionarios, satisfaciendo aridad.
+- Comprensión de listas para generar colecciones.
+- Programación funcional básica y funciones anónimas.
+- Prototipo de map.
+- Map filter zip y reduce
+- Requerimiento propuesto caso de estudio (Revisar JSON)
+- Numpy, validación tres en raya generado de forma alternada
+
+
+
+

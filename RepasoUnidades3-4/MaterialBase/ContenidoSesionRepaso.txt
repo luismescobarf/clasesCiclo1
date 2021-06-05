@@ -1,0 +1,10 @@
+-> Unidad 4 -> Otras formas de implementar lo que sabemos
+---------------------------------------------------------
+- Reto3 -> Inquietudes: paso a paso gráficamente
+- Conversión de contenedores
+- Comprensión de listas
+- Map, Reduce, Zip, Filter
+- bdCajerosFuente -> Generador pseudoaleatorio de los casos de prueba
+
+Comandantes:
+-> Héctor, Orlando, Freddie, David Arias de Reserva
