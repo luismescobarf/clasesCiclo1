@@ -21,4 +21,12 @@
 for _ in range(5):
     print('Hola Tripulantes')
 
+#Ciclo -> por lo menos una vez y detenerse bajo un criterio
+trabajando = True
+while(trabajando):
+    print('Realizando cómputo 1')
+    print('Realizando cómputo 2')
+    if( input('Desea salir (s)').lower() == 's'  ):
+        trabajando = False
+
  
