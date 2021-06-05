@@ -24,3 +24,10 @@ print('Diccionario resultante: ',diccionario)
 
 diccionario = dict( zip( range(len(cadena)) , cadena )  )
 print('Conversión a Diccionario en una sola línea',diccionario)
+
+#Convertir diccionario a cadena
+print("Llaves: ",list( diccionario.keys() ))
+print("Valores: ",list( diccionario.values() ))
+print("Items: ",list( diccionario.items() ))
+cadenaValoresDiccionario = ''.join(list(diccionario.values()))
+print("Cadena Valores Diccionario: ",cadenaValoresDiccionario)
