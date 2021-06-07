@@ -1,10 +1,16 @@
--> Unidad 4 -> Otras formas de implementar lo que sabemos
----------------------------------------------------------
-- Reto3 -> Inquietudes: paso a paso gráficamente
-- Conversión de contenedores
-- Comprensión de listas
-- Map, Reduce, Zip, Filter
-- bdCajerosFuente -> Generador pseudoaleatorio de los casos de prueba
+Sesión de Hoy
+-------------
+- Paradigma de programación funcional
+    -> Programación Imperativa -> Cómo se hacen las cosas
+        Programación Spaghetti, Lineal
+        Programación Procedural/Estructurada
+        Programación Orientada a Objetos
+    -> Programación Declarativa -> Qué se debe hacer sin tanto detalle
+        Programación funcional  -> Minimiza o se anula los cambios de estados o actualizaciones de las variables
+                                -> Tratamiento de las funciones como tipo de dato (variable)
+        Lenguajes orientados a bases de datos
+        Programación lógica
+        Programación por restricciones
+        Programación matemática
 
-Comandantes:
--> Héctor, Orlando, Freddie, David Arias de Reserva
+- Map Filter Zip Reduce
