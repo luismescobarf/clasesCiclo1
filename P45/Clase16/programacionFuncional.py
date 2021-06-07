@@ -30,10 +30,13 @@ def operacion(signo):
 def calculadora(signo, a, b):
 
     #Construir o solicitarle a otra función la construcción del proceso que debe hacer
-    funcionAplicar = operacion(signo)
+    #funcionAplicar = operacion(signo)
 
     #Aplicar función que cunstruída en tiempo de ejecución
-    return funcionAplicar(a,b)
+    #return funcionAplicar(a,b)
+
+    #Forma resumida
+    return operacion(signo)(a,b)
 
 #Utilizar función
 print(calculadora('+',7,8))
@@ -41,3 +44,11 @@ print(calculadora('-',-12,8))
 print(calculadora('*',1555,4))
 print(calculadora('/',88,2))
 print(calculadora('akjsdlkajsdlk',7,8))
+#Utilizar función recogiendo información del teclado
+print(calculadora(input('Signo->'),int(input('a = ')),int(input('b = '))))
+
+#Construir nuestro propio map
+#Map -> recibo función y colección y retorno cada uno de los elementos de la colección después de aplicarles la función
+
+
+
