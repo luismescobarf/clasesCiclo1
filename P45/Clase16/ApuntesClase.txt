@@ -1,0 +1,13 @@
+-> Unidad 4: formas distintas de hacer lo que ya hemos estudiado
+-> Paradigma Imperativo (cómo se hacen las cosas de forma detallada)
+    -> Programación Spaghetti o Lineal
+    -> Programación Procedural/Estructurada
+    -> Programación Orientad a Objetos
+-> Paradigma Declarativo (qué se debe hacer)
+    -> Paradigma de programación funcional
+    -> Lenguajes orientados a bases de datos
+    -> Programación por restricciones
+    -> Programación lógica
+    -> Programación matemática
+
+
