@@ -185,6 +185,69 @@ for persona in grupoPersonas:
     codigo = primerasLetrasNombre + ultimasLetrasApellido + primerasLetrasId
     print(codigo)
 
+#Utilizando el map de Python
+print(list(map(generarCodigo,grupoPersonas)))
+
+#Filter -> recibe una función tipo predicado y una colección y filtra los elementos que cumplen el predicado
+notas = [3.5, 3.0, 4.4, 3.2, 1.0, 3.8, 2.1, 3.7, 4.0]
+
+#Requerimiento colección con las notas aprobadas para luego obtener el promedio de los que pasaron la materia
+
+#Predicado
+def aprobo(nota):
+    # if nota>=3:
+    #     return True
+    # else:
+    #     return False
+    return nota>=3
+
+coleccionNotasAprobadas = tuple(filter(aprobo, notas))
+print("Los aprobados", coleccionNotasAprobadas)
+print("Promedio de los aprobados", promedio(coleccionNotasAprobadas))
+
+#Single line 
+print("Promedio de los aprobados (una línea)", promedio(tuple( filter(lambda x:x>=3.0 , notas) )))
+
+# #Notación lambda
+# print('Notación Lambda->', tuple( filter(lambda x:x>=3.0 , notas) ) )
+
+
+#Requerimiento 1 agregar una edad aleatoria al grupo de personas que tenemos
+grupoPersonas = [   
+                    ['Luis', 'Roa', '54048'], 
+                    ['Luis', 'Alfaro', '87539'], 
+                    ['Luis', 'Rodríguez', '14697'], 
+                    ['Luis', 'Vanegas', '49084'], 
+                    ['Juan', 'Vanegas', '28854'], 
+                    ['Pedro', 'Alfaro', '41835'], 
+                    ['Juan', 'Alfaro', '18405'], 
+                    ['Juan', 'Arrieta', '85322']
+                ]
+print(grupoPersonas)
+
+def generarEdadAleatoria():
+    return random.randint(10,45)
+
+#Notación lambda
+#grupoPersonasAmpliado = list( map(lambda x: [x[0],x[1],x[2], generarEdadAleatoria()], grupoPersonas))
+grupoPersonasAmpliado = list( map(lambda persona: [persona[0:], generarEdadAleatoria()], grupoPersonas))
+
+# #Definición separada de la función a aplicad
+# def agregarEdad(persona):
+#     nuevaLista = persona.append(generarEdadAleatoria())
+#     return nuevaLista
+# grupoPersonasAmpliado = list( map(agregarEdad, grupoPersonas))
+
+print('Colección Ampliada:')
+[print(persona) for persona in grupoPersonasAmpliado]
+
+#Requerimiento 2 Obtener las personas menores de edad
+def esMenorDeEdad(persona):
+    return persona[-1]<18
+personasMenoresEdad = list(filter(esMenorDeEdad,grupoPersonasAmpliado))
+
+print('Menores de Edad:')
+[print(menor) for menor in personasMenoresEdad]
 
 
 
