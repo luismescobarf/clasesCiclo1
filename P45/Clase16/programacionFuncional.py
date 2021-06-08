@@ -249,15 +249,22 @@ personasMenoresEdad = list(filter(esMenorDeEdad,grupoPersonasAmpliado))
 print('Menores de Edad:')
 [print(menor) for menor in personasMenoresEdad]
 
+#Reduce -> acumula una serie de valores de una colección: colección números y quiero sumarlos
 
+#Sumatoria de una colección de números con reduce
+from functools import reduce
+numeros = list(range(1,11))#Colección de números
+print('Lista generada ->',numeros)
+print("Resultado Reduce:",reduce( lambda elemento=0, acumulador=0 : elemento + acumulador, numeros ))
 
+#Reduce en Imperativa
+acumulador = 0
+for elemento in numeros:
+    acumulador = acumulador+elemento
+print("Sumatoria hecha en imperativa:",acumulador)
 
-
-
-
-
-
-    
+#Requerimiento: concatenar en una cadena todos los nombres del listado de personas
+print(reduce( lambda nombresConcatenados='', persona=''  :  nombresConcatenados + ' ' + persona, map(lambda x:x[0],grupoPersonas) ))
 
 
 
