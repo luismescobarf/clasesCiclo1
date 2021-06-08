@@ -118,13 +118,78 @@ def generarNotasGrupoAleatorias():
         grupoEstudiantes.append([notasPosibles[random.randint(0,len(notasPosibles)-1)] for _ in range(cortesSemestre)])
     return grupoEstudiantes
 
+#Generar notas de estudiantes aleatoriamente
+def generarIdentificacion():
+    numeroCaracteres = 5
+    id = str()
+    for _ in range(numeroCaracteres):
+        id += str(random.randint(0,9))
+    return id
+
+def generarPersonasAleatorias():
+    nombresPosibles = ("Ana","Luis","Juan","Pedro","Daniel","Maria Camila","Nathalia")
+    apellidosPosibles = ("Roa","Vanegas","Arrieta","Cely","Mendoza","Rodríguez","Alfaro")    
+    numeroPersonas = 8
+    grupoPersonas = list()
+    for _ in range(numeroPersonas):
+        nombre = nombresPosibles[random.randint(0,len(nombresPosibles)-1)]
+        apellido = apellidosPosibles[random.randint(0,len(apellidosPosibles)-1)]
+        id = generarIdentificacion()
+        grupoPersonas.append([nombre, apellido, id ])
+    return grupoPersonas
+
 #Generar el caso
 grupoEstudiantes = generarNotasGrupoAleatorias()
 print('Notas Grupo: ')
 [print(estudiante) for estudiante in grupoEstudiantes]
-    
 
     
+#Fernando -> notas de estudiantes y sacar promedios
+def promedio(notasEstudiante):
+    return round(sum(notasEstudiante)/len(notasEstudiante),2)
+print("Promedio de cada estudiante: ", mapBasico(promedio,grupoEstudiantes) )
+
+#Daniel ->  Recibir informacion de un usuario y crear el código 
+#           compuesto por el nombre, apellido y identificacion
+grupoPersonas = generarPersonasAleatorias()
+[print(persona) for persona in grupoPersonas]
+print(generarPersonasAleatorias())
+
+def generarCodigo(persona):
+    return persona[0][0:2]+persona[1][-2:]+persona[2][0:2]
+print("Códigos generados: ", mapBasico(generarCodigo,grupoPersonas))
+
+#Versión imperativa del map anterior (requerimiento Daniel)
+grupoPersonas = [   
+                    ['Luis', 'Roa', '54048'], 
+                    ['Luis', 'Alfaro', '87539'], 
+                    ['Luis', 'Rodríguez', '14697'], 
+                    ['Luis', 'Vanegas', '49084'], 
+                    ['Juan', 'Vanegas', '28854'], 
+                    ['Pedro', 'Alfaro', '41835'], 
+                    ['Juan', 'Alfaro', '18405'], 
+                    ['Juan', 'Arrieta', '85322']
+                ]
+print(grupoPersonas)
+
+for persona in grupoPersonas:
+    #Obtener las primeras dos letras del nombre
+    primerasLetrasNombre = persona[0][0:2]
+    #primerasLetrasNombre = persona[0][0] + persona[1][1]
+    #Obtener las últimas dos letras del apellido
+    ultimasLetrasApellido = persona[1][-2:]
+    #ultimasLetrasApellido = persona[1][-2] + persona[1][-1] 
+    #Obtener los primeros dos caracteres del id
+    primerasLetrasId = persona[2][0:2]
+
+    codigo = primerasLetrasNombre + ultimasLetrasApellido + primerasLetrasId
+    print(codigo)
+
+
+
+
+
+
 
 
 
