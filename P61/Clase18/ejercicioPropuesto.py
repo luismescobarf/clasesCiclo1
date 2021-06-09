@@ -28,6 +28,7 @@ print(caso1['25u8sBP'].keys())
 #3) Filtrar las transferencias (solamente este tipo de transacciones interesan para el requerimiento)
 #4) Filtramos las transferencias del último trimestre (marzo, abril y mayo de 2021)
 
+#Traducción del algoritmo planteado
 #1) Obtener los cajeros (con toda su información) de los modelos solicitados 101 y 2017
 
 #Declarativa
@@ -42,5 +43,21 @@ cajerosSeleccionados = list(filter(cajeroModelosSolicitados,caso1.items()))
 #pp.pprint(cajerosSeleccionados)
 #print(cajerosSeleccionados)
 
+#2) Extraer las transacciones de esos cajeros de los modelos solicitados
+listaListasTransacciones = list(map(lambda x:x[1]['transacciones'],cajerosSeleccionados))
+#pp.pprint(listaListasTransacciones)
+from functools import reduce
+listaTransacciones = list(reduce(lambda acumulador=list(), elemento=dict(): acumulador + elemento ,listaListasTransacciones))
+#pp.pprint(listaTransacciones)
 
+#3) Filtrar las transferencias (solamente este tipo de transacciones interesan para el requerimiento)
+transferencias = list( filter(lambda x:x['tipoMovimiento']=='transferencia',  listaTransacciones))
+#pp.pprint(transferencias)
 
+#4) Filtramos las transferencias del último trimestre (marzo, abril y mayo de 2021) (03-2021,04-2021,05-2021)
+def esDelUltimoTrimestre(transaccion):
+    fecha = transaccion['fechaMovimiento']
+    return any([ fecha[3:]=='03-2021', fecha[3:]=='04-2021', fecha[3:]=='05-2021' ])
+
+listadoRequerimiento = list( filter(esDelUltimoTrimestre,transferencias) ) 
+pp.pprint(listadoRequerimiento)
