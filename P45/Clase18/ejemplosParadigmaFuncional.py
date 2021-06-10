@@ -45,49 +45,77 @@
 
 #Funciones de primera clase y de orden superior
 
-#Primera clase
-def convertirFormatoSFF(coordenada):
-    return [coordenada[0],float(coordenada[1]),float(coordenada[2])]
+# #Primera clase
+# def convertirFormatoSFF(coordenada):
+#     return [coordenada[0],float(coordenada[1]),float(coordenada[2])]
 
-def convertirFormatoSIF(coordenada):
-    return [coordenada[0],int(coordenada[1]),float(coordenada[2])]
+# def convertirFormatoSIF(coordenada):
+#     return [coordenada[0],int(coordenada[1]),float(coordenada[2])]
 
-def convertirFormatoSII(coordenada):
-    return [coordenada[0],int(coordenada[1]),int(coordenada[2])]
+# def convertirFormatoSII(coordenada):
+#     return [coordenada[0],int(coordenada[1]),int(coordenada[2])]
 
-#Partir la coordenada entrada como texto
-def partirPorEspacios(coordenada):
-    return coordenada.split(' ')
+# #Partir la coordenada entrada como texto
+# def partirPorEspacios(coordenada):
+#     return coordenada.split(' ')
 
-def partirPorComas(coordenada):
-    return coordenada.split(',')
+# def partirPorComas(coordenada):
+#     return coordenada.split(',')
 
-#Acumular en un alista las coordenadas
-def coleccionarEnLista(lista, elemento):
-    #return lista + elemento
-    return lista.append(elemento)
+# #Acumular en un alista las coordenadas
+# def coleccionarEnLista(lista, elemento):
+#     #return lista + elemento
+#     return lista.append(elemento)
 
-def coleccionarEnDiccionario(diccionario, elemento):
-    diccionario[elemento[0]+str(elemento[1])+str(elemento[2])] = elemento
+# def coleccionarEnDiccionario(diccionario, elemento):
+#     diccionario[elemento[0]+str(elemento[1])+str(elemento[2])] = elemento
 
-#Función para coleccionar las coordenadas (función de orden superior)
-def coleccionarCoordenadas(cadenaCoordenada,coleccion,funcionPartido,funcionFormato,funcionColeccion):
-    funcionColeccion(coleccion, funcionFormato(funcionPartido(cadenaCoordenada)) )    
+# #Función para coleccionar las coordenadas (función de orden superior)
+# def coleccionarCoordenadas(cadenaCoordenada,coleccion,funcionPartido,funcionFormato,funcionColeccion):
+#     funcionColeccion(coleccion, funcionFormato(funcionPartido(cadenaCoordenada)) )
 
-n = 3
-corrimientoX = 4
-corrimientoY = 1
-#coleccionPuntos = list()
-coleccionPuntos = dict()
-for _ in range(n):
-    #coleccionarCoordenadas(input('Coord: '),coleccionPuntos,partirPorEspacios,convertirFormatoSFF,coleccionarEnLista)
-    coleccionarCoordenadas(input('Coord: '),coleccionPuntos,partirPorComas,convertirFormatoSII,coleccionarEnDiccionario)
-print('Colección de puntos obtenida')
-print(coleccionPuntos)
-    
+# def aplicarCorrimientoX(coordenada,corrimiento):
+#     coordenada[1] += corrimiento
+#     return coordenada
 
+# def aplicarCorrimientoY(coordenada,corrimiento):
+#     coordenada[2] += corrimiento
+#     return coordenada
 
+# def aplicarCorrimientos(aplicarCorrimientoX, aplicarCorrimientoY, coordenada):
+#     coordenada = aplicarCorrimientoX(coordenada,corrimientoX)
+#     coordenada = aplicarCorrimientoX(coordenada,corrimientoY)
+#     return coordenada
+
+# n = 3
+# corrimientoX = 4
+# corrimientoY = 1
+# coleccionPuntos = list()
+# #coleccionPuntos = dict()
+# for _ in range(n):
+#     #coleccionarCoordenadas(input('Coord: '),coleccionPuntos,partirPorEspacios,convertirFormatoSFF,coleccionarEnLista)
+#     coleccionarCoordenadas(input('Coord: '),coleccionPuntos,partirPorComas,convertirFormatoSII,coleccionarEnLista)
+# print('Colección de puntos obtenida')
+# print(coleccionPuntos)
+
+# for i in range(len(coleccionPuntos)):
+#     coleccionPuntos[i][1] = coleccionPuntos[i][1] + corrimientoX
+#     coleccionPuntos[i][2] = coleccionPuntos[i][2] + corrimientoY
+
+# print(coleccionPuntos)
 
 
 #Aprovechando map y reduce
+n = 3
+corrimientoX = 4
+corrimientoY = 1
+coleccionPuntos = []
+for _ in range(n):
+    coordenada = input('Ingrese coordenadas: ')
+    coordenada = coordenada.split(' ')
+    coleccionPuntos.append(coordenada)
+
+coleccionPuntos = list(map(lambda x:[x[0], float(x[1])+corrimientoX, float(x[2])+corrimientoY]  ,coleccionPuntos))
+print('Colección requerimiento')
+print(coleccionPuntos)
 

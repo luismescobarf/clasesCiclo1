@@ -100,13 +100,41 @@ def requerimiento1(caso):
     #Retornar la información extraída
     return transferenciasUltimoTrimestre
 
+#1)Obtener todas las transferencias realizadas en el último trimestre en los cajeros
+#de modelo 101,2017
+def req1Procedural(caso):
+
+    #Recorrer el diccionario con todos los cajeros
+    transaccionesCajeros = []
+    for idCajero, infoCajero in caso.items():
+        if infoCajero['modeloCajero'] == 101 or infoCajero['modeloCajero'] == 2017:
+            for transaccion in infoCajero['transacciones']:
+                if transaccion['tipoMovimiento'] == 'transferencia':
+                    if transaccion['fechaMovimiento'][3:] == '03-2021' or transaccion['fechaMovimiento'][3:] == '04-2021' or transaccion['fechaMovimiento'][3:] == '05-2021':
+                        transaccionesCajeros.append(transaccion) 
+                        #transaccionesCajeros += transaccion 
+
+    return transaccionesCajeros
 
 #Consulta del requerimiento 1 aplicada a varios casos
-print('-------------Caso1')
-print(requerimiento1(caso1))
 
-print('-------------Caso2')
-print(requerimiento1(caso2))
+#Llamado a las soluciones imperativas
+print('-------------Caso1')
+resultadoProcedural = req1Procedural(caso1)
+pp.pprint(resultadoProcedural)
+
+#Llamados a las soluciones declarativas
+print('-------------Caso1')
+resultadoDeclarativo = requerimiento1(caso1)
+pp.pprint(resultadoDeclarativo)
+
+print('Núm proc->',len(resultadoProcedural))
+print('Núm dec->',len(resultadoDeclarativo))
+print('iguales') if resultadoProcedural == list(resultadoDeclarativo) else print('diferentes')
+
+
+# print('-------------Caso2')
+# print(requerimiento1(caso2))
 
 
 
