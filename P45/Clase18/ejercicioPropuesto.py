@@ -112,9 +112,29 @@ def req1Procedural(caso):
                 if transaccion['tipoMovimiento'] == 'transferencia':
                     if transaccion['fechaMovimiento'][3:] == '03-2021' or transaccion['fechaMovimiento'][3:] == '04-2021' or transaccion['fechaMovimiento'][3:] == '05-2021':
                         transaccionesCajeros.append(transaccion) 
-                        #transaccionesCajeros += transaccion 
+                        #transaccionesCajeros += transaccion
 
     return transaccionesCajeros
+
+#3) Todas las transacciones de los cajeros cerrados que pertenecen a la firma integrada
+def declarativoReq3(caso):
+
+    #Predicado
+    def cajeroRequerimiento(cajero):
+        return all( [ cajero[0][-2:]=='FI', cajero[1]['estado'] == 'Cerrado' ] )
+
+    cajeros = list(filter(cajeroRequerimiento,caso.items()))
+
+    listaListasTransacciones = list(map(lambda x:x[1]['transacciones'],cajeros))
+
+    from functools import reduce
+    listaTransacciones = listaTransacciones = reduce( lambda acumulador=list(), elemento=dict() : acumulador + elemento, listaListasTransacciones )
+
+    pp.pprint(listaTransacciones)
+    print('Num Transacciones ->',len(listaTransacciones))
+
+
+
 
 #Consulta del requerimiento 1 aplicada a varios casos
 
@@ -136,6 +156,8 @@ print('iguales') if resultadoProcedural == list(resultadoDeclarativo) else print
 # print('-------------Caso2')
 # print(requerimiento1(caso2))
 
+#Llamado solución declarativa requerimiento 3
+declarativoReq3(caso1)
 
 
 
