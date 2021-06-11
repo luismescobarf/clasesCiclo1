@@ -77,7 +77,7 @@ def req1DeclarativaV3(caso):
         return any([ fecha[3:]=='03-2021', fecha[3:]=='04-2021', fecha[3:]=='05-2021' ])
 
     #Aplicar todos los pasos y retornar el iterable del requerimiento
-    return filter(esDelUltimoTrimestre,filter(esTransferencia,  reduce(lambda acumulador=list(), elemento=dict(): acumulador + elemento , map(obtenerTransacciones, filter(cajeroModelosSolicitados,caso.items())))))    
+    return filter(esDelUltimoTrimestre,filter(esTransferencia,  reduce(lambda acumulador=list(), elemento=dict(): acumulador + elemento , map(obtenerTransacciones, filter(cajeroModelosSolicitados,caso.items())))))  
 
 def req1DeclarativaV2(caso):
 
@@ -170,5 +170,23 @@ pp.pprint(list(resDeclarativa2))
 print('Solución Declarativa Sin Conversiones Aplicando la función a los iterables resultantes')
 resDeclarativa3 = req1DeclarativaV3(caso1)
 pp.pprint(list(resDeclarativa3))
+
+print("Número de cajeros->",len(caso1))
+
+#Experimento: Generar un caso de tamaño mediano con bdCajerosFuente.py (modificar máximos de cajeros, transferencias)
+
+#Caso grande:
+import json
+casoGrande = dict()
+try:
+
+    casoGrande = json.load(open("casoPruebaTransacciones.json"))
+except:
+    print("Fallo cargando el caso grande")
+
+#Pruebas (comparar los tiempos con el aporte de Edgar)
+print('Caso Grande Totalmente Funcional')
+resDeclarativaCG = req1DeclarativaV3(casoGrande)
+pp.pprint(list(resDeclarativaCG))
 
 

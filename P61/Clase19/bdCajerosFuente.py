@@ -84,12 +84,13 @@ def generarIdCajeroAlteatorio(tamañoCodigo):
 
 #Parámetros y conjuntos para generación de instancias
 tamañoCodigo = 5
-maxNumeroCajeros = 10
-maxNumeroTransacciones = 15
+maxNumeroCajeros = 1000
+maxNumeroTransacciones = 100
 contenedorZonas = [1,2,3,4,5,6,7]
 contenedorModelosCajeros = [100,101,2017,2020]
 contenedorEstados = ['Fuera de Servicio','Operando','Cerrado']          
-contenedorTiposMovimientos = ['retiro','consignacion','transferencia']
+#contenedorTiposMovimientos = ['retiro','consignacion','transferencia']
+contenedorTiposMovimientos = ['retiro','transferencia']
 contenedorMontos = [20000,50000,100000,200000,300000,500000,1000000]
 contenedorTiposCuenta = ['ahorros','corriente','cuentaVirtual']
 contenedorFechasDias = generadorFechas()
@@ -157,18 +158,22 @@ print("----->>>>Fin del caso de prueba generado<<<<<<<<<")
 almacenarCasoPruebaJSON(caso,'casoEjemplo2.json')"""
 
 #Generación de los casos de prueba por lote
-numeroCasosPrueba = 7
-for i in range(numeroCasosPrueba):
-    caso = generacionInstancia(maxNumeroCajeros,maxNumeroTransacciones)
-    print('Caso',i+2,'---------------------------------------------')
-    print()
-    print()
-    pp.pprint(caso)
-    print()
-    print()
-    print('---------------------------------------------')
-    almacenarCasoPruebaJSON(caso,'./ficheroCasosJSON/caso'+str(i+2)+'.json')
-    input()
+# numeroCasosPrueba = 1
+# for i in range(numeroCasosPrueba):
+#     caso = generacionInstancia(maxNumeroCajeros,maxNumeroTransacciones)
+#     print('Caso',i+2,'---------------------------------------------')
+#     print()
+#     print()
+#     #pp.pprint(caso)
+#     print()
+#     print()
+#     print('---------------------------------------------')
+#     almacenarCasoPruebaJSON(caso,'./ficheroCasosJSON/caso'+str(i+2)+'.json')
+#     input()
+
+#Generar un solo caso
+caso = generacionInstancia(maxNumeroCajeros,maxNumeroTransacciones)
+almacenarCasoPruebaJSON(caso)
 
 #Ejemplo de estructura (algunas imprecisiones)
 bdCajerosInstitucion = {
