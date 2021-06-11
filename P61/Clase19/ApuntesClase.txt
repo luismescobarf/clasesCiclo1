@@ -6,9 +6,10 @@
 Viernes 10 a 1 pm
 -> Requerimientos (reto4)
 -> Numpy -> arreglos numéricos operaciones de álegebra lineal
+-> Manejo de archivos
 -> Pandas -> Archivo excel cargado en memoria (funciones básicas y tablas dinámicas)
 
-Unidad6 -> Objetos e interfaces gráficas (Aplicación CRUD).
+
 
 
 
