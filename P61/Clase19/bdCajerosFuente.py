@@ -12,7 +12,7 @@ def aleatorioLista(lista):
         return lista[ random.randint(0, len(lista)-1)  ]
 
 #Función para escribir el diccionario en un archivo JSON
-def almacenarCasoPruebaJSON(diccionario, rutaArchivo='casoPruebaTransacciones.json'):
+def almacenarCasoPruebaJSON(diccionario, rutaArchivo='casoPruebaTransacciones2.json'):
     #Descargar contenedor de datos del caso de prueba
     try:
         with open(rutaArchivo, 'w') as archivo_json:
@@ -84,13 +84,13 @@ def generarIdCajeroAlteatorio(tamañoCodigo):
 
 #Parámetros y conjuntos para generación de instancias
 tamañoCodigo = 5
-maxNumeroCajeros = 1000
+maxNumeroCajeros = 10000
 maxNumeroTransacciones = 100
 contenedorZonas = [1,2,3,4,5,6,7]
 contenedorModelosCajeros = [100,101,2017,2020]
 contenedorEstados = ['Fuera de Servicio','Operando','Cerrado']          
-#contenedorTiposMovimientos = ['retiro','consignacion','transferencia']
-contenedorTiposMovimientos = ['retiro','transferencia']
+contenedorTiposMovimientos = ['retiro','consignacion','transferencia']
+#contenedorTiposMovimientos = ['retiro','transferencia']
 contenedorMontos = [20000,50000,100000,200000,300000,500000,1000000]
 contenedorTiposCuenta = ['ahorros','corriente','cuentaVirtual']
 contenedorFechasDias = generadorFechas()

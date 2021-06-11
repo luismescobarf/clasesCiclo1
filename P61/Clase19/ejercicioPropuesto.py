@@ -179,14 +179,35 @@ print("Número de cajeros->",len(caso1))
 import json
 casoGrande = dict()
 try:
-
-    casoGrande = json.load(open("casoPruebaTransacciones.json"))
+    casoGrande = json.load(open("casoPruebaTransacciones2.json"))
 except:
     print("Fallo cargando el caso grande")
 
 #Pruebas (comparar los tiempos con el aporte de Edgar)
+
+import time
+
 print('Caso Grande Totalmente Funcional')
+tic = time.perf_counter()
 resDeclarativaCG = req1DeclarativaV3(casoGrande)
-pp.pprint(list(resDeclarativaCG))
+#pp.pprint(list(resDeclarativaCG))
+toc = time.perf_counter()
+print(f"Proceso toma  {toc - tic:0.4f} segundos")
+print('-------------------------------')
+print('Caso Grande Totalmente Imperativo')
+tic = time.perf_counter()
+resDeclarativaCG = req1Imperativa(casoGrande)
+#pp.pprint(list(resDeclarativaCG))
+toc = time.perf_counter()
+print(f"Proceso toma  {toc - tic:0.4f} segundos")
+
+
+
+
+
+
+
+
+
 
 
