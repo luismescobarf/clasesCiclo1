@@ -1,0 +1,8 @@
+Sesión 20
+---------
+-> Reto4 (exploración en una estructura de datos intrincada)
+    -> Paradigma Imperativo
+    -> Paradigma Declarativo
+-> numpy (arreglos) -> Medio
+-> Manejo de archivos
+-> Analítica y visualización de datos básica -> Pandas (sobre numpy)
