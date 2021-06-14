@@ -40,10 +40,61 @@ arregloAleatorio = np.random.randint(5,size=10)
 print('Arreglo aleatorio')
 print(arregloAleatorio)
 
-matrizAleatoria = np.random.randint(3,5,size=(6,6))
+matrizAleatoria = np.random.randint(-5,10,size=(6,6))
 print('Matriz aleatoria')
 print(matrizAleatoria)
 
 #Recorrer la matriz generada para mirar el acceso
+print('Recorriendo con variables auxiliares')
+for fila in matrizAleatoria:
+    for columna in fila:
+        print(columna,end=',')
+    print()
+
+#Recorrer la matriz generada para mirar el acceso con subíndices (tuplas)
+print('Recorriendo con subíndices')
+for i in range(len(matrizAleatoria)):
+    for j in range(len(matrizAleatoria[i])):
+        print(matrizAleatoria[i,j],end=' ')
+    print()
+
+#Generar una matriz de forma aleatoria seleccionando elementos d eun contenedor
+frutas = ['manzana','naranja','piña','mora','feijoa','limon']
+arrSelAleatoria = np.random.choice(frutas, 5)
+print('Arreglo:')
+print(arrSelAleatoria)
+
+matSelAleatoria = np.random.choice(frutas, (3,3), p=[0.1,0.1,0.1,0.1,0.1,0.5])
+#matSelAleatoria = np.random.choice(frutas, (3,3))
+print('Matriz:')
+print(matSelAleatoria)
+
+#Operaciones numpy
+matOperaciones = np.random.randint(0,3,size=(3,3))
+print('Matriz generada para operaciones')
+print(matOperaciones)
+
+#Suma de todas las columnas
+print('Suma de cada columna')
+print(np.sum(matOperaciones,axis=0))
+
+#Suma de todas las filas
+print('Suma de cada filas')
+print(np.sum(matOperaciones,axis=1))
+
+#Rangos de la matriz (submatrices)
+print('Suma de la columna con índice 2')
+print(np.sum(matOperaciones[:,2]))
+
+#Extraer el rango
+submat = matOperaciones[0:2,0:2]
+print(submat)
+print('Sumatoria de filas de la submatriz')
+print(np.sum(submat,axis=1))
+print('Sumatoria de columnas de la submatriz')
+print(np.sum(submat,axis=0))
+
+
+
 
 
