@@ -99,12 +99,28 @@ diagonal = matOperaciones.diagonal()
 print('Diagonal obtenida ->',diagonal)
 print('Sumatoria de la diagonal->',np.sum(diagonal))
 
-#Mostrar sumatoria diagonal matriz irregular
-matIrregular = np.random.randint(0,3,size=(4,3))
-print('Matriz irregular')
-print(matIrregular)
-print('Diagonal irregular: ',matIrregular.diagonal())
-print('Sumatoria diagonal matriz irregular-> ',np.sum( matIrregular.diagonal() ))
+# #Mostrar sumatoria diagonal matriz irregular
+# matIrregular = np.random.randint(0,3,size=(4,3))
+# print('Matriz irregular')
+# print(matIrregular)
+# print('Diagonal irregular: ',matIrregular.diagonal())
+# print('Sumatoria diagonal matriz irregular-> ',np.sum( matIrregular.diagonal() ))
+
+#Espejo
+print('Matriz antes de espejo')
+print(matOperaciones)
+print('Espejo columnas')
+espejo = np.fliplr(matOperaciones)
+print(espejo)
+
+#Diagonal contraria
+print('Diagonal contraria')
+print(  espejo.diagonal()  )
+
+#Transpuesta
+transpuesta = np.transpose(matOperaciones)
+print("Transpuesta")
+print(transpuesta)
 
 
 
