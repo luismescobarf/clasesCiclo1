@@ -120,3 +120,5 @@ print( np.where(matrizAletoria==2)  )
 
 
 
+
+
