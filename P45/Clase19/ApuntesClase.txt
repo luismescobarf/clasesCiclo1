@@ -1,4 +1,4 @@
-Sesión 20
+Sesión 19
 ---------
 -> Reto4 (exploración en una estructura de datos intrincada)
     -> Paradigma Imperativo
