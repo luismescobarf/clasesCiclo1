@@ -54,7 +54,7 @@ def estadoTablero(tablero):
     ganaFila = 3 in np.sum(tablero, axis = 1)
     ganaColumna = 3 in np.sum(tablero, axis = 0)
     ganaDiagonal = 3 == np.sum(tablero.diagonal())
-    ganaDiagonalContraria = np.sum(np.fliplr(tablero).diagonal())
+    ganaDiagonalContraria = 3 == np.sum(np.fliplr(tablero).diagonal())
     if any( [ganaFila,ganaColumna,ganaDiagonal,ganaDiagonalContraria] ):
         return 1
 
@@ -62,7 +62,7 @@ def estadoTablero(tablero):
     ganaFila = 30 in np.sum(tablero, axis = 1)
     ganaColumna = 30 in np.sum(tablero, axis = 0)
     ganaDiagonal = 30 == np.sum(tablero.diagonal())
-    ganaDiagonalContraria = np.sum(np.fliplr(tablero).diagonal())
+    ganaDiagonalContraria = 30 == np.sum(np.fliplr(tablero).diagonal())
     if any( [ganaFila,ganaColumna,ganaDiagonal,ganaDiagonalContraria] ):
         return 10
 
@@ -117,6 +117,18 @@ mostrarTablero(tablero)
 
 #Simulación
 while True:
+
+    #Revisar el estado del tablero
+    estado = estadoTablero(tablero)
+    if estado == 1:
+        print("Ganó el Jugador O!")        
+        break
+    elif estado == 10:
+        print("Ganó el Jugador X!")
+        break
+    elif estado == 0:
+        print("Empate!!")
+        break
 
     #Revisar si el tablero aún tiene posiciones
     casillasVacias = np.where(tablero==0)
