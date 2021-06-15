@@ -78,6 +78,37 @@ matrizAletoria = np.random.randint(3, size=(3,3) )
 print(matrizAletoria)
 
 #Operaciones
+# sumatoriaColumnas = np.sum(matrizAletoria,axis=0)
+# print(sumatoriaColumnas)
+
+# sumatoriaFilas = np.sum(matrizAletoria,axis=1)
+# print(sumatoriaFilas)
+
+# print("Sumatoria de toda la matriz->",np.sum(matrizAletoria))
+
+print("Diagonal de la matriz:")
+print(matrizAletoria.diagonal())
+
+print("Transpuesta (Visualizaciones)")
+print(matrizAletoria.transpose())
+
+print("Espejo de las columnas")
+print( np.fliplr(matrizAletoria) )
+
+print("Diagonal contraria")
+print(np.fliplr(matrizAletoria).diagonal())
+
+print("Efecto sobre la matriz original")
+print(matrizAletoria)
+
+print('Ubicación de los valores iguales a 2')
+print( np.where(matrizAletoria==2)  )
+
+
+
+
+
+
 
 
 
