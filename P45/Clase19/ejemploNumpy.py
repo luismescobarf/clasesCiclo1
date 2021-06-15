@@ -44,10 +44,40 @@ np.random.shuffle(requerimientoJahleel)
 print('Sin repeticiones y orden aleatorio')
 print(requerimientoJahleel)
 
-matrizAletoria = np.random.randint(-5, 5, size=(7,7) )
+#Consultas (recorrer extraer partes del contenedor)
+matrizAletoria = np.random.randint(-5, 5, size=(6,6) )
 print(matrizAletoria)
 
-#Consultas (recorrer extraer partes del contenedor)
+#Consultar tamaño
+# print('Número de filas->',len(matrizAletoria))
+# print('Número de columnas->',len(matrizAletoria[0]))
+# print('Forma de la matriz ->',np.shape(matrizAletoria))
+# print('Tipo de la forma ->',type(np.shape(matrizAletoria)))
+
+# #Acceder a valores o a posiciones
+# print('Valor de la esquina superior izquierda-> ', matrizAletoria[0,0] )
+# print('Valor de la diagonal-> ', matrizAletoria[2,2] )
+
+submatriz = matrizAletoria[1:4,1:]
+print(submatriz)
+
+#Recorridos for -> con variables auxiliares o temporales, con subíndices
+print('Recorrido 1 matrizAleatoria')
+for fila in matrizAletoria:
+    for columna in fila:
+        print(columna,end=' ')
+    print()
+
+print('Recorrido 2 matrizAleatoria')
+for i in range(len(matrizAletoria)):
+    for j in range(len(matrizAletoria[i])):
+        print(matrizAletoria[i,j],end=' ')
+    print()
+
+matrizAletoria = np.random.randint(3, size=(3,3) )
+print(matrizAletoria)
+
+#Operaciones
 
 
 
