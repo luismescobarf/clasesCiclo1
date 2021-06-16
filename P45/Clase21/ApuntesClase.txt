@@ -1,0 +1,4 @@
+Sesión 21
+---------
+-> Pandas sobre un archivo/base de datos (Reto 5)
+-> Unidad 6 -> AppCRUD (Archivos y Consola -> GUI TKINTER)
