@@ -2,6 +2,7 @@
 import numpy as np
 import pandas as pd
 import random
+import matplotlib.pyplot as plt
 
 #Series -> Columnas
 #Dataframes -> Hoja de Cálculo
@@ -27,7 +28,7 @@ print('Valores',serieDiccionario.values)
 numEstudiantes = 10
 nombres = [ 'Carlos','Pedro','Juan','Nathalia','Valentina','MariaCamila']
 codigos = ['asjhd7','aksjd8','hh6','898s','uj77f','rtgerg','ref56','jyju8','asda2','5ggh']
-estado = ['matriculado','suspendido','becado']
+estado = ['matriculado','suspendido','becado','egresado','posgrado']
 serie1 = pd.Series( [ random.choice(nombres) for _ in range(numEstudiantes) ] )
 serie2 = pd.Series( [ random.randint(100,200) for _ in range(numEstudiantes) ] )
 #serie3 = pd.Series( [ random.choice(estado) for _ in range(numEstudiantes) ], index=['Hola',1,2,3,55,4,5,7,9,10] )
@@ -72,10 +73,22 @@ print('Dataframe haciendo grupos de registros')
 dfMedia = df.groupby(['Estado'])['PromedioAjustado'].mean()
 print(dfMedia)
 
+#dfMedia.plot(kind='barh')
+dfMedia.plot()
+
 #Cuántos estudiantes hay en cada grupo de estados
 dfNumEstudiantesEstado = df.groupby(['Estado'])[['Estado']].count()
 #dfNumEstudiantesEstado = df.groupby(['Estado']).count()
 print(dfNumEstudiantesEstado)
+
+print(df.describe())
+print(df.info())
+
+dfNumEstudiantesEstado.plot(kind='pie',y='Estado')
+
+plt.show()
+
+
 
 
 
