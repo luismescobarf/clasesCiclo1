@@ -86,7 +86,13 @@ print(df.info())
 
 dfNumEstudiantesEstado.plot(kind='pie',y='Estado')
 
+diccionarioConteo = dfNumEstudiantesEstado.to_dict()
+print('Dataframe a diccionario')
+print(diccionarioConteo)
+
 plt.show()
+
+
 
 
 
