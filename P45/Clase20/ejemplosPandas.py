@@ -30,7 +30,8 @@ codigos = ['asjhd7','aksjd8','hh6','898s','uj77f','rtgerg','ref56','jyju8','asda
 estado = ['matriculado','suspendido','becado']
 serie1 = pd.Series( [ random.choice(nombres) for _ in range(numEstudiantes) ] )
 serie2 = pd.Series( [ random.randint(100,200) for _ in range(numEstudiantes) ] )
-serie3 = pd.Series( [ random.choice(estado) for _ in range(numEstudiantes) ], index=['Hola',1,2,3,55,4,5,7,9,10] )
+#serie3 = pd.Series( [ random.choice(estado) for _ in range(numEstudiantes) ], index=['Hola',1,2,3,55,4,5,7,9,10] )
+serie3 = pd.Series( [ random.choice(estado) for _ in range(numEstudiantes) ], range(numEstudiantes) )
 print(serie1)
 print(serie2)
 print(serie3)
@@ -52,6 +53,29 @@ serie5 = pd.Series( [ random.randint(50,120) for _ in range(numEstudiantes) ], i
 df['Puntaje3'] = serie5
 print(df)
 print()
+
+#Obtener el promedio de los estudiantes y agregarlo al dataframe
+df['Promedio'] = (df['Puntaje1']+df['Puntaje2']+df['Puntaje3'])/3
+
+df['PromedioAjustado'] = (df['Puntaje1']+df['Puntaje2']+(df['Puntaje3']+0.2*df['Puntaje3']))/3
+
+print(df)
+print()
+
+#Solamente estudiantes becados que aprobaron (promedio ajustado > 130)
+print('Estudiantes Aprobados Becados')
+dfAprobados = df[ df['PromedioAjustado'] > 130 ][ df['Estado'] == 'becado' ]
+print(dfAprobados)
+
+#Media (calificación promedio) de los estudiantes por grupos de estados
+print('Dataframe haciendo grupos de registros')
+dfMedia = df.groupby(['Estado'])['PromedioAjustado'].mean()
+print(dfMedia)
+
+#Cuántos estudiantes hay en cada grupo de estados
+dfNumEstudiantesEstado = df.groupby(['Estado'])[['Estado']].count()
+#dfNumEstudiantesEstado = df.groupby(['Estado']).count()
+print(dfNumEstudiantesEstado)
 
 
 
