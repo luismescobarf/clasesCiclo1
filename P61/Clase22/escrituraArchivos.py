@@ -28,5 +28,25 @@ try:
 except:
     print("Error de escritura!!")
 
+#Cargar el diccionario proveniente del json
+diccionarioDesdeJSON = dict()
+try:
+    with open('estudiantesP61.json') as manejadorArchivo:
+        diccionarioDesdeJSON = json.load(manejadorArchivo)
+        print('Carga de JSON exitosa')
+except:
+    print('Error Cargando JSON!!!')
+
+print('Proveniente de archivo JSON')
+print(diccionarioDesdeJSON)
+
+#Tomar el diccionario de estudiantes y guardarlo en un json
+try:
+    with open('estudiantesP61.json','w') as manejadorArchivo:
+        json.dump(diccionarioEstudiantes,manejadorArchivo)
+        print('Creación de JSON exitosa')
+except:
+    print('Error de la escritura del archivo JSON')
+
 
     
