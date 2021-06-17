@@ -6,11 +6,13 @@ import tkinter as tk
 #Inicio de la aplicación
 tareas = CRUD.Read()
 
+
 #Creamos la aplicación
 m = iGUI.ventanaMenuPrincipal(tareas)
 
 #Mainloop
 m.mainloop()
+
 
 """
 #Controlador versión consola
