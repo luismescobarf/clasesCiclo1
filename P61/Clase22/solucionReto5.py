@@ -63,6 +63,6 @@ def analisisTRM(rutaArchivo):
 
     
 #Sección principal
-#print(analisisTRM('BaseDeDatosReto5.csv'))
-print(analisisTRM('https://raw.githubusercontent.com/luismescobarf/clasesCiclo1/master/BaseDeDatosReto5.csv'))
+print(analisisTRM('BaseDeDatosReto5.csv'))
+#print(analisisTRM('https://raw.githubusercontent.com/luismescobarf/clasesCiclo1/master/BaseDeDatosReto5.csv'))
     
