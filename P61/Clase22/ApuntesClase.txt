@@ -1,5 +1,4 @@
-Sesión 21
+Sesión 22
 ---------
--> Pandas (Series, Dataframes y Visualizaciones)
 -> Manejo de archivos
 -> Analítica y visualización de datos básica -> Pandas (análisis sobre archivo)
